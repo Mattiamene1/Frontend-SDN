@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Topology Viewer</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="js/topology.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js"
+        integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <!-- Pulsanti per gestire l'aggiornamento automatico della vista -->
+        <button class="btn btn-primary" @click="toggleAutoUpdate()">
+            {{ autoUpdate ? "STOP" : "START" }} Auto Update
+        </button>
+        &emsp;
+        <!-- Pulsanti per cambiare il layout della topologia -->
+        <button class="btn btn-secondary" @click="changeLayout('vertical')" v-if="!autoUpdate">
+            Vertical Layout
+        </button>
+        &emsp;
+        <button class="btn btn-secondary" @click="changeLayout('horizontal')" v-if="!autoUpdate">
+            Horizontal Layout
+        </button>
+        &emsp;
+        <!-- Dettagli dello switch selezionato -->
+        <div class="row" v-if="switchDetails">
+            <div class="mt-2 col">
+                <!-- Pulsante per nascondere i dettagli dello switch -->
+                <a class="btn btn-danger" href="#" @click="hideSwitchDetails()">Close Switch Details</a>
+                <h2>Details for Switch {{ switchId }}</h2>
+                <p>DPID: {{ switchData.dpid }}</p>
+                <!-- Tabella delle porte dello switch -->
+                <h2>Ports for Switch {{ switchId }}</h2>
+                <table class="mt-2 table table-bordered table-sm">
+                    <thead>
+                        <th>Port No.</th>
+                        <th>Name</th>
+                        <th>MAC Address</th>
+                    </thead>
+                    <tbody>
+                        <!-- Ciclo per ogni porta dello switch -->
+                        <tr v-for="port in switchData.ports">
+                            <td>{{ port.port_no }}</td>
+                            <td>{{ port.name }}</td>
+                            <td>{{ port.hw_addr }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Tabella delle regole del flusso per lo switch -->
+                <h2 class="mt-2">Flow Table for Switch {{ switchId }}</h2>
+                <table class="mt-2 table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>Table ID</th>
+                            <th>Priority</th>
+                            <th>Actions</th>
+                            <th>Match</th>
+                            <th>
+                                Timeout<br />
+                                <span class="badge text-bg-primary">Idle</span>&nbsp;
+                                <span class="badge text-bg-success">Hard</span>
+                            </th>
+                            <th>Duration (s)</th>
+                            <th>Packet Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ciclo per ogni regola del flusso -->
+                        <tr v-for="flow in flowTable">
+                            <td>{{ flow.table_id }}</td>
+                            <td>{{ flow.priority }}</td>
+                            <td>{{ flow.actions.join(', ') }}</td>
+                            <td>
+                                <!-- Ciclo per ogni corrispondenza nella regola del flusso -->
+                                <span v-for="(rule, key) in flow.match">
+                                    <b>{{ key }}</b>: {{ rule }} |
+                                </span>
+                            </td>
+                            <td>
+                                <span class="badge text-bg-primary">{{ flow.idle_timeout }}</span>&nbsp;
+                                <span class="badge text-bg-success">{{ flow.hard_timeout }}</span>
+                            </td>
+                            <td>{{ flow.duration_sec }}</td>
+                            <td>{{ flow.packet_count }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Dettagli dell'host selezionato -->
+            <div class="mt-2 col" v-if="hostDetails">
+                <!-- Pulsante per nascondere i dettagli dell'host -->
+                <a class="btn btn-danger" href="#" @click="hideHostDetails()">Close Host Details</a>
+                <h2>Details for Host {{ hostId }}</h2>
+                <p>
+                    MAC: {{ host.mac }}<br>
+                    <!-- Controlla e mostra gli indirizzi IPv4 e IPv6 dell'host se presenti -->
+                    <template v-if="host.ipv4.length">IPv4: {{ host.ipv4.join(', ') }}<br></template>
+                    <template v-if="host.ipv6.length">IPv6: {{ host.ipv6.join(', ') }}</template>
+                </p>
+                <!-- Tabella per mostrare la porta dell'host connessa -->
+                <h2>Host Port Connected To</h2>
+                <table class="mt-2 table table-bordered table-sm">
+                    <thead>
+                        <th>Port No.</th>
+                        <th>Name</th>
+                        <th>MAC Address</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ host.port.port_no }}</td>
+                            <td>{{ host.port.name }}</td>
+                            <td>{{ host.port.hw_addr }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Contenitore per la topologia -->
+        <div id="topology-container"></div>
+    </div>
+</body>
+
+</html>
