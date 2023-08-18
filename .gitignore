@@ -1,3 +1,4 @@
 # ingore node_modules folders
 node_modules
 
+style.js

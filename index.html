@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>Topology Viewer</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Visualizzatore topologie di Rete</title>
+    <link rel="stylesheet" href="style.css">
+    
     <script src="topology.js"></script>
     
     <link rel="stylesheet" href="https://unpkg.com/next/dist/next.css">
@@ -31,11 +32,11 @@
         &emsp;
         <!-- Pulsanti per cambiare il layout della topologia -->
         <button class="btn btn-secondary" @click="changeLayout('vertical')" v-if="!autoUpdate">
-            Vertical Layout
+            Layout Verticale
         </button>
         &emsp;
         <button class="btn btn-secondary" @click="changeLayout('horizontal')" v-if="!autoUpdate">
-            Horizontal Layout
+            Layout Orizzontale
         </button>
         &emsp;
         <!-- Dettagli dello switch selezionato -->
@@ -43,15 +44,15 @@
             <div class="mt-2 col">
                 <!-- Pulsante per nascondere i dettagli dello switch -->
                 <a class="btn btn-danger" href="#" @click="hideSwitchDetails()">Close Switch Details</a>
-                <h2>Details for Switch {{ switchId }}</h2>
+                <h2>Dettagli dello Switch {{ switchId }}</h2>
                 <p>DPID: {{ switchData.dpid }}</p>
                 <!-- Tabella delle porte dello switch -->
-                <h2>Ports for Switch {{ switchId }}</h2>
+                <h2>Porta dello Switch {{ switchId }}</h2>
                 <table class="mt-2 table table-bordered table-sm">
                     <thead>
-                        <th>Port No.</th>
-                        <th>Name</th>
-                        <th>MAC Address</th>
+                        <th>Porta N°.</th>
+                        <th>Nome</th>
+                        <th>Indirizzo MAC</th>
                     </thead>
                     <tbody>
                         <!-- Ciclo per ogni porta dello switch -->
@@ -63,7 +64,7 @@
                     </tbody>
                 </table>
                 <!-- Tabella delle regole del flusso per lo switch -->
-                <h2 class="mt-2">Flow Table for Switch {{ switchId }}</h2>
+                <h2 class="mt-2">Tabella del Flow dello Switch {{ switchId }}</h2>
                 <table class="mt-2 table table-bordered table-sm">
                     <thead>
                         <tr>
@@ -106,7 +107,7 @@
             <div class="mt-2 col" v-if="hostDetails">
                 <!-- Pulsante per nascondere i dettagli dell'host -->
                 <a class="btn btn-danger" href="#" @click="hideHostDetails()">Close Host Details</a>
-                <h2>Details for Host {{ hostId }}</h2>
+                <h2>Dettagli Host {{ hostId }}</h2>
                 <p>
                     MAC: {{ host.mac }}<br>
                     <!-- Controlla e mostra gli indirizzi IPv4 e IPv6 dell'host se presenti -->
@@ -114,12 +115,12 @@
                     <template v-if="host.ipv6.length">IPv6: {{ host.ipv6.join(', ') }}</template>
                 </p>
                 <!-- Tabella per mostrare la porta dell'host connessa -->
-                <h2>Host Port Connected To</h2>
+                <h2>Host connesso alla porta</h2>
                 <table class="mt-2 table table-bordered table-sm">
                     <thead>
-                        <th>Port No.</th>
-                        <th>Name</th>
-                        <th>MAC Address</th>
+                        <th>Porta N°.</th>
+                        <th>Nome</th>
+                        <th>Indirizzo MAC</th>
                     </thead>
                     <tbody>
                         <tr>

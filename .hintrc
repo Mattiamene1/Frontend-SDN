@@ -7,5 +7,8 @@
     "not ie 11",
     "not and_chr <= 114",
     "not samsung <= 21"
-  ]
+  ],
+  "hints": {
+    "meta-charset-utf-8": "off"
+  }
 }
