@@ -4,6 +4,7 @@
 <head>
     <title>Visualizzatore topologie di Rete</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addingstyle.css">
     <script src="style.js"></script>
     
     <link rel="stylesheet" href="https://unpkg.com/next/dist/next.css">
@@ -23,116 +24,125 @@
 </head>
 
 <body>
-    <div id="app" class="container">
-        <!-- Pulsanti per gestire l'aggiornamento automatico della vista -->
-        <button class="btn btn-primary" @click="toggleAutoUpdate()">
-            {{ autoUpdate ? "STOP" : "START" }} Auto Update
-        </button>
-        &emsp;
-        <!-- Pulsanti per cambiare il layout della topologia -->
-        <button class="btn btn-secondary" @click="changeLayout('vertical')" v-if="!autoUpdate">
-            Layout Verticale
-        </button>
-        &emsp;
-        <button class="btn btn-secondary" @click="changeLayout('horizontal')" v-if="!autoUpdate">
-            Layout Orizzontale
-        </button>
-        &emsp;
-        <!-- Dettagli dello switch selezionato -->
-        <div class="row" v-if="switchDetails">
-            <div class="mt-2 col">
-                <!-- Pulsante per nascondere i dettagli dello switch -->
-                <a class="btn btn-danger" href="#" @click="hideSwitchDetails()">Close Switch Details</a>
-                <h2>Dettagli dello Switch {{ switchId }}</h2>
-                <p>DPID: {{ switchData.dpid }}</p>
-                <!-- Tabella delle porte dello switch -->
-                <h2>Porta dello Switch {{ switchId }}</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <th>Porta N°.</th>
-                        <th>Nome</th>
-                        <th>Indirizzo MAC</th>
-                    </thead>
-                    <tbody>
-                        <!-- Ciclo per ogni porta dello switch -->
-                        <tr v-for="port in switchData.ports">
-                            <td>{{ port.port_no }}</td>
-                            <td>{{ port.name }}</td>
-                            <td>{{ port.hw_addr }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- Tabella delle regole del flusso per lo switch -->
-                <h2 class="mt-2">Tabella del Flow dello Switch {{ switchId }}</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <tr>
-                            <th>Table ID</th>
-                            <th>Priority</th>
-                            <th>Actions</th>
-                            <th>Match</th>
-                            <th>
-                                Timeout<br />
-                                <span class="badge text-bg-primary">Idle</span>&nbsp;
-                                <span class="badge text-bg-success">Hard</span>
-                            </th>
-                            <th>Duration (s)</th>
-                            <th>Packet Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Ciclo per ogni regola del flusso -->
-                        <tr v-for="flow in flowTable">
-                            <td>{{ flow.table_id }}</td>
-                            <td>{{ flow.priority }}</td>
-                            <td>{{ flow.actions.join(', ') }}</td>
-                            <td>
-                                <!-- Ciclo per ogni corrispondenza nella regola del flusso -->
-                                <span v-for="(rule, key) in flow.match">
-                                    <b>{{ key }}</b>: {{ rule }} |
-                                </span>
-                            </td>
-                            <td>
-                                <span class="badge text-bg-primary">{{ flow.idle_timeout }}</span>&nbsp;
-                                <span class="badge text-bg-success">{{ flow.hard_timeout }}</span>
-                            </td>
-                            <td>{{ flow.duration_sec }}</td>
-                            <td>{{ flow.packet_count }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div id="ContenitoreGrosso" class="container1">
+        <label class="ui-switch">
+            <input type="checkbox">
+            <div class="slider">
+              <div class="circle"></div>
             </div>
-            <!-- Dettagli dell'host selezionato -->
-            <div class="mt-2 col" v-if="hostDetails">
-                <!-- Pulsante per nascondere i dettagli dell'host -->
-                <a class="btn btn-danger" href="#" @click="hideHostDetails()">Close Host Details</a>
-                <h2>Dettagli Host {{ hostId }}</h2>
-                <p>
-                    MAC: {{ host.mac }}<br>
-                    <!-- Controlla e mostra gli indirizzi IPv4 e IPv6 dell'host se presenti -->
-                    <template v-if="host.ipv4.length">IPv4: {{ host.ipv4.join(', ') }}<br></template>
-                    <template v-if="host.ipv6.length">IPv6: {{ host.ipv6.join(', ') }}</template>
-                </p>
-                <!-- Tabella per mostrare la porta dell'host connessa -->
-                <h2>Host connesso alla porta</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <th>Porta N°.</th>
-                        <th>Nome</th>
-                        <th>Indirizzo MAC</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ host.port.port_no }}</td>
-                            <td>{{ host.port.name }}</td>
-                            <td>{{ host.port.hw_addr }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+        </label>
+          
+        <div id="app" class="container">
+            <div id="firstraw" class="container2">
+                <!-- Pulsanti per gestire l'aggiornamento automatico della vista -->
+                <button class="btn btn-primary" @click="toggleAutoUpdate()">
+                    {{ autoUpdate ? "STOP" : "START" }} Auto Update
+                </button>
+                &emsp;
+                <!-- Pulsanti per cambiare il layout della topologia -->
+                <button class="btn btn-secondary" @click="changeLayout('vertical')" v-if="!autoUpdate">
+                    Layout Verticale
+                </button>
+                &emsp;
+                <button class="btn btn-secondary" @click="changeLayout('horizontal')" v-if="!autoUpdate">
+                    Layout Orizzontale
+                </button>
             </div>
+            &emsp;
+            <!-- Dettagli dello switch selezionato -->
+            <div class="row" v-if="switchDetails">
+                <div class="mt-2 col">
+                    <h2>Dettagli dello Switch {{ switchId }}</h2>
+                    <p>DPID: {{ switchData.dpid }}</p>
+                    <a class="btn btn-danger" href="#" @click="hideSwitchDetails()">Chiudi Dettagli Swich</a>
+                    <!-- Tabella delle porte dello switch -->
+                    <h2>Porta dello Switch {{ switchId }}</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <th>Porta N°.</th>
+                            <th>Nome</th>
+                            <th>Indirizzo MAC</th>
+                        </thead>
+                        <tbody>
+                            <!-- Ciclo per ogni porta dello switch -->
+                            <tr v-for="port in switchData.ports">
+                                <td>{{ port.port_no }}</td>
+                                <td>{{ port.name }}</td>
+                                <td>{{ port.hw_addr }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Tabella delle regole del flusso per lo switch -->
+                    <h2 class="mt-2">Tabella del Flow dello Switch {{ switchId }}</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>Table ID</th>
+                                <th>Priority</th>
+                                <th>Actions</th>
+                                <th>Match</th>
+                                <th>
+                                    Timeout<br />
+                                    <span class="badge text-bg-primary">Idle</span>&nbsp;
+                                    <span class="badge text-bg-success">Hard</span>
+                                </th>
+                                <th>Duration (s)</th>
+                                <th>Packet Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Ciclo per ogni regola del flusso -->
+                            <tr v-for="flow in flowTable">
+                                <td>{{ flow.table_id }}</td>
+                                <td>{{ flow.priority }}</td>
+                                <td>{{ flow.actions.join(', ') }}</td>
+                                <td>
+                                    <!-- Ciclo per ogni corrispondenza nella regola del flusso -->
+                                    <span v-for="(rule, key) in flow.match">
+                                        <b>{{ key }}</b>: {{ rule }} |
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge text-bg-primary">{{ flow.idle_timeout }}</span>&nbsp;
+                                    <span class="badge text-bg-success">{{ flow.hard_timeout }}</span>
+                                </td>
+                                <td>{{ flow.duration_sec }}</td>
+                                <td>{{ flow.packet_count }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Dettagli dell'host selezionato -->
+                <div class="mt-2 col" v-if="hostDetails">
+                    <h2>Dettagli Host {{ hostId }}</h2>
+                    <p>
+                        MAC: {{ host.mac }}<br>
+                        <!-- Controlla e mostra gli indirizzi IPv4 e IPv6 dell'host se presenti -->
+                        <template v-if="host.ipv4.length">IPv4: {{ host.ipv4.join(', ') }}<br></template>
+                        <template v-if="host.ipv6.length">IPv6: {{ host.ipv6.join(', ') }}</template>
+                    </p>
+                    <a class="btn btn-danger" href="#" @click="hideHostDetails()">chiudi Dettagli Host</a>
+                    <!-- Tabella per mostrare la porta dell'host connessa -->
+                    <h2>Host connesso alla porta</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <th>Porta N°.</th>
+                            <th>Nome</th>
+                            <th>Indirizzo MAC</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ host.port.port_no }}</td>
+                                <td>{{ host.port.name }}</td>
+                                <td>{{ host.port.hw_addr }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Contenitore per la topologia -->
+            <div id="topology-container"></div>
         </div>
-        <!-- Contenitore per la topologia -->
-        <div id="topology-container"></div>
     </div>
 </body>
 
