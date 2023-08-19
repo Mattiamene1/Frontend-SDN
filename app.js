@@ -80,7 +80,7 @@ createApp({
           if (vm.host_detail) {
             vm.show_host(vm.host_id);
           }
-        }, 10 * 1000); // Aggiorna ogni 10 secondi
+        }, 5 * 1000); // Aggiorna ogni 5 secondi
         this.auto_update = true;
       }
     },
