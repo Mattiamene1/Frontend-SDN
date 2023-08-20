@@ -3,34 +3,61 @@
 
 <head>
     <title>Visualizzatore topologie di Rete</title>
+
     <link rel="stylesheet" href="Next/style.css">
     <link rel="stylesheet" href="addingstyle.css">
+
     <script src="Next/next.js"></script>
     
     <link rel="stylesheet" href="https://unpkg.com/next/dist/next.css">
-    <script src="https://unpkg.com/next/dist/next.js"></script>
+    <script src="https://unpkg.com/next/dist/next.js">
+
+    </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js"
         integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js">
+    </script>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        const switchInput = document.querySelector('.ui-switch input');
+        const container1 = document.getElementById('ContenitoreGrosso');
+        const container2 = document.querySelector('.container2');
+          
+        switchInput.addEventListener('change', () => {
+            if (switchInput.checked) {
+                container1.classList.add('dark-mode');
+                container2.classList.add('dark-mode');
+            } else {
+                container1.classList.remove('dark-mode');
+                container2.classList.remove('dark-mode');
+              }
+            });
+    </script>
+          
 </head>
 
 <body>
     <div id="ContenitoreGrosso" class="container1">
-        <label class="ui-switch">
+        <div class="switch-container">
+            <label class="ui-switch">
             <input type="checkbox">
             <div class="slider">
-              <div class="circle"></div>
-            </div>
-        </label>
+            <div class="circle"></div>
+        </div>
+  </label>
+</div>
           
         <div id="app" class="container">
             <div id="firstraw" class="container2">
