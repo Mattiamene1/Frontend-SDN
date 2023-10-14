@@ -7,7 +7,7 @@ Softwarized And Virtualized mobile networks project 2023
 - Diamand Muka
 
 ## Dependencies
-- Next UI (version 0.8)
+- [Next UI](https://github.com/nextui-org/nextui) (version 0.8)
 
 ## To Run
 Once [back-end](https://github.com/Mattiamene1/Backend-SDN) is UP, use [index.html](/index.html) to visualize the SDN network.
