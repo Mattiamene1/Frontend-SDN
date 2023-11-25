@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 // Aggiungi una route per ottenere dati dal processo backend
 app.get('/getHostsData', async (req, res) => {
     try {
-      const response = await axios.get('http://localhost:3000/hosts');
+      const response = await axios.get('http://127.0.0.1:3000/hosts');
       const data = response.data;
       res.json({ hostsData: data });
     } catch (error) {
