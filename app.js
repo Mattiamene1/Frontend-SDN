@@ -1,5 +1,5 @@
-import { createApp } from 'vue';
-import App from './node_modules/vue/index.js';
+const { createApp } = require('vue');
+const App = require('./node_modules/vue/index');
 const app = createApp(App);
 
 createApp({
