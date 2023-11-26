@@ -4,7 +4,8 @@ const path = require('path');
 const axios = require('axios').default;
 
 // Imposta la porta su 3000
-const PORT = process.env.PORT || 5500;
+const PORT = 3000;
+// const PORT = process.env.PORT || 5500;
 
 // Definisci una directory statica per servire il file HTML
 app.use(express.static(path.join(__dirname)));
