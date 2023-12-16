@@ -10,5 +10,7 @@ Softwarized And Virtualized mobile networks project 2023
 - [Next UI](https://github.com/nextui-org/nextui) (version 0.8)
 
 ## To Run
-Once [back-end](https://github.com/Mattiamene1/Backend-SDN) is UP, use [index.html](/index.html) to visualize the SDN network.
-You can follow this [link](http://locahost:3000)
+Using Apache2 as webserver([port forwarding](https://github.com/Mattiamene1/Backend-SDN#environment) 80 -> 8000), copy the content of this repo into the comnetsemu's /var/www/html/ folder
+- cd /var/www/html/ (create it if necessary)
+- sudo mv Frontend-SDN/* .
+Once [back-end](https://github.com/Mattiamene1/Backend-SDN) is UP, navigate the http://locahost:8000
