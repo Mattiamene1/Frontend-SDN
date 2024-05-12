@@ -1,0 +1,56 @@
+{
+  "it": {
+    "text": {
+      "title": "Visualizzatore Topologie di Rete",
+      "autoUpdateButtonText": "{{autoUpdate ? 'FERMA' : 'AVVIA'}} Aggiornamento Automatico",
+      "layoutVertical": "Layout Verticale",
+      "layoutHorizontal": "Layout Orizzontale",
+      "switchDetailsTitle": "Dettagli dello Switch {{switchId}}",
+      "closeSwitchDetailsButton": "Chiudi Dettagli Switch",
+      "switchPortsTitle": "Porte dello Switch {{switchId}}",
+      "portNumber": "Porta N°.",
+      "name": "Nome",
+      "macAddress": "Indirizzo MAC",
+      "flowTableTitle": "Tabella del Flusso dello Switch {{switchId}}",
+      "tableID": "ID Tabella",
+      "priority": "Priorità",
+      "actions": "Azioni",
+      "match": "Match",
+      "timeout": "Timeout",
+      "idle": "Idle",
+      "hard": "Hard",
+      "duration": "Durata (s)",
+      "packetCount": "Conteggio Pacchetti",
+      "hostDetailsTitle": "Dettagli Host {{hostId}}",
+      "closeHostDetailsButton": "Chiudi Dettagli Host",
+      "connectedHostPortTitle": "Host connesso alla porta"
+    }
+  },
+  "en": {
+    "text": {
+      "title": "Network Topologies Viewer",
+      "autoUpdateButtonText": "{{autoUpdate ? 'STOP' : 'START'}} Auto Update",
+      "layoutVertical": "Vertical Layout",
+      "layoutHorizontal": "Horizontal Layout",
+      "switchDetailsTitle": "Switch Details {{switchId}}",
+      "closeSwitchDetailsButton": "Close Switch Details",
+      "switchPortsTitle": "Switch Ports {{switchId}}",
+      "portNumber": "Port No.",
+      "name": "Name",
+      "macAddress": "MAC Address",
+      "flowTableTitle": "Flow Table of Switch {{switchId}}",
+      "tableID": "Table ID",
+      "priority": "Priority",
+      "actions": "Actions",
+      "match": "Match",
+      "timeout": "Timeout",
+      "idle": "Idle",
+      "hard": "Hard",
+      "duration": "Duration (s)",
+      "packetCount": "Packet Count",
+      "hostDetailsTitle": "Host Details {{hostId}}",
+      "closeHostDetailsButton": "Close Host Details",
+      "connectedHostPortTitle": "Host Connected to Port"
+    }
+  }
+}
