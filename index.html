@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="addingstyle.css">
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
         <!-- Vue 3 e i18n -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -32,7 +34,7 @@
             }
         
             function loadJSON(lang = 'it') {
-                fetch('data.json')
+                fetch('translation.json')
                     .then(response => response.json())
                     .then(data => {
                         const texts = data[lang].text;
@@ -71,9 +73,14 @@
     </head>
 
     <body>
+        
+
         <div id="ContenitoreGrosso" class="container1">
+            
+            <input type="checkbox" id="toggle" title="Toggle">
+            
             <div class="language-switch">
-                <select id="languageSelector" onchange="changeLanguage(this.value)">
+                <select id="languageSelector" onchange="changeLanguage(this.value)" title="Select Language">
                     <option value="it">Italiano</option>
                     <option value="en">English</option>
                 </select>
