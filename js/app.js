@@ -1,13 +1,11 @@
-const { createApp } = require('vue');
-const App = require('./node_modules/vue/index');
-const app = createApp(App);
+const { createApp } = Vue;
 
 createApp({
   data() {
     return {
       topology: null,
       topologyConfig: {
-        // Configurazione per i nodi
+        // configuration for nodes
         width: window.innerWidth,
         height: window.innerHeight,
         nodeConfig: {
@@ -15,20 +13,15 @@ createApp({
           iconType: "model.device_type",
           color: "model.color",
         },
-        // Configurazione per i link
+        // configuration for links
         linkConfig: {
           linkType: "straight",
           color: "model.color",
         },
+        // if true, the nodes' icons are shown, a dot is shown instead
         showIcon: true,
         dataProcessor: "force",
       },
-      customLayoutConfig: {
-      numColumns: 5,    // Numero di colonne nella griglia
-      gridSize: 100,    // Dimensione della griglia
-      offsetX: 100,     // Offset orizzontale del layout
-      offsetY: 100,     // Offset verticale del layout
-    },
       auto_update: false,
       auto_update_interval: null,
       switch_detail: false,
@@ -38,23 +31,11 @@ createApp({
       host: {},
       host_id: null,
       host_detail: false,
-      searchQuery: "",
-      showSwitches: true,
-      showHosts: true,
-      customLayout: false,
     };
-    
   },
   watch: {
     flow_table_hidden: function (newVal, oldVal) {
       this.topology.adaptToContainer();
-    },
-    customLayout: function (newVal, oldVal) {
-      if (newVal) {
-        this.custom_layout();
-      } else {
-        this.default_layout();
-      }
     },
   },
   methods: {
@@ -67,9 +48,9 @@ createApp({
       } else {
         this.auto_update_interval = setInterval(async function () {
           reset_topology();
-          hosts = await get_hosts();
-          switches = await get_switches();
-          links = await get_links();
+          let hosts = await get_hosts();
+          let switches = await get_switches();
+          let links = await get_links();
 
           if (!vm.topology) {
             vm.init_topology();
@@ -82,7 +63,7 @@ createApp({
           if (vm.host_detail) {
             vm.show_host(vm.host_id);
           }
-        }, 5 * 1000); // Aggiorna ogni 5 secondi
+        }, 10 * 1000); // 10 seconds
         this.auto_update = true;
       }
     },
@@ -110,7 +91,7 @@ createApp({
     },
     show_switch: function (id) {
       this.switch_id = id;
-      for (switch_ of switches) {
+      for (let switch_ of switches) {
         if (id === parseInt(switch_.dpid)) {
           this.switch_ = switch_;
           break;
@@ -124,7 +105,7 @@ createApp({
     },
     show_host: function (id) {
       this.host_id = id;
-      for (host of hosts) {
+      for (let host of hosts) {
         if (host.ipv4.includes(id) || host.ipv6.includes(id)) {
           this.host = host;
           break;
@@ -136,21 +117,21 @@ createApp({
       this.host_detail = false;
     },
     init_topology: async function () {
-      hosts = await get_hosts();
-      switches = await get_switches();
-      links = await get_links();
+      let hosts = await get_hosts();
+      let switches = await get_switches();
+      let links = await get_links();
       let vm = this;
 
-      // Creazione dell'applicazione Next
+      // instantiate next app
       const app = new nx.ui.Application();
 
-      // Creazione della topologia
+      // instantiate Topology class
       this.topology = new nx.graphic.Topology(this.topologyConfig);
 
-      // Caricamento dei dati della topologia
+      // load topology data from app/data.js
       this.topology.data(build_topology());
 
-      // Aggancio della topologia all'applicazione
+      // bind the topology object to the app
       this.topology.on("topologyGenerated", function () {
         vm.topology.eachNode(function (callback, context) {
           callback.on("clickNode", function () {
@@ -168,7 +149,7 @@ createApp({
 
       this.topology.attach(app);
 
-      // L'applicazione viene eseguita all'interno del container specifico (id="topology-container")
+      // app must run inside a specific container. In our case this is the one with id="topology-container"
       app.container(document.getElementById("topology-container"));
 
       const elements = document.getElementsByClassName("n-popupContainer");
@@ -176,87 +157,9 @@ createApp({
         elements[0].parentNode.removeChild(elements[0]);
       }
     },
-    search_nodes: function () {
-      // Filtra i nodi in base alla ricerca
-      if (!this.topology) return;
-
-      const searchQuery = this.searchQuery.toLowerCase();
-      this.topology.eachNode((node) => {
-        const label = node.model().get("name").toLowerCase();
-        const deviceType = node.model().get("device_type").toLowerCase();
-        const showNode =
-          (this.showSwitches && deviceType === "switch") ||
-          (this.showHosts && deviceType === "host");
-
-        if (label.includes(searchQuery) && showNode) {
-          node.show();
-        } else {
-          node.hide();
-        }
-      });
-    },
-    toggle_switches: function () {
-      this.showSwitches = !this.showSwitches;
-      this.search_nodes();
-    },
-    toggle_hosts: function () {
-      this.showHosts = !this.showHosts;
-      this.search_nodes();
-    },
-    custom_layout: function () {
-      // Implementa un layout personalizzato
-      if (!this.topology) return;
-      
-      let nodes = this.topology.data().nodes;
-      let { numColumns, gridSize, offsetX, offsetY } = this.customLayoutConfig;
-
-      Object.values(nodes).forEach((node, index) => {
-        let x = offsetX + (index % numColumns) * gridSize;
-        let y = offsetY + Math.floor(index / numColumns) * gridSize;
-        node.x = x;
-        node.y = y;
-      });
-
-
-      this.topology.adaptToContainer();
-    },
-    default_layout: function () {
-      // Ripristina il layout predefinito
-      if (!this.topology) return;
-
-     this.topology.getLayout('hierarchicalLayout').direction('horizontal');
-    this.topology.getLayout('hierarchicalLayout').sortOrder(['switch', 'host']);
-    this.topology.getLayout('hierarchicalLayout').levelBy(function (node, model) {
-      return model.get('device_type');
-    });
-
-    this.topology.activateLayout('hierarchicalLayout');
-    },
-    reset_topology: function () {
-      // Resettare la topologia
-      if (this.topology) {
-        this.topology.clear();
-        this.topology = null;
-      }
-    },
-  },
-  computed: {
-    filteredSwitches: function () {
-      return switches.filter(
-        (s) => s.name.toLowerCase().includes(this.searchQuery)
-      );
-    },
-    filteredHosts: function () {
-      return hosts.filter(
-        (h) =>
-          h.name.toLowerCase().includes(this.searchQuery) ||
-          h.ipv4.join(",").includes(this.searchQuery) ||
-          h.ipv6.join(",").includes(this.searchQuery)
-      );
-    },
   },
   mounted: function () {
     this.init_topology();
-    this.change_auto_update();
+    // this.change_auto_update();
   },
 }).mount("#app");

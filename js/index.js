@@ -31,3 +31,6 @@ app.get('/getHostsData', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server avviato su http://localhost:${PORT}`);
 });
+
+
+// TODO sistemo perche non corrisponde ad app.js

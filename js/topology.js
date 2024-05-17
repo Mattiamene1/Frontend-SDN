@@ -27,8 +27,7 @@ class NetworkTopology {
     }
 
     async fetchFlowTable(id) {
-        const response = await this.fetchData(`/stats/flow/${id}`);
-        return response;
+        return await this.fetchData(`/stats/flow/${id}`);
     }
 
     generateInternalId(idStr) {
@@ -122,11 +121,3 @@ class NetworkTopology {
         return topologyData;
     }
 }
-
-// Usage
-const topology = new NetworkTopology('http://localhost:3000');
-await topology.fetchSwitches();
-await topology.fetchHosts();
-await topology.fetchLinks();
-const finalTopology = topology.buildTopologyData();
-console.log(finalTopology);
