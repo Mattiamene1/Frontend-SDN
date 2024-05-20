@@ -1,21 +1,35 @@
+:root {
+  --primary-100: #1F3A5F;
+  --primary-200: #4d648d;
+  --primary-300: #acc2ef;
+  --accent-100: #3D5A80;
+  --accent-200: #cee8ff;
+  --text-100: #FFFFFF;
+  --text-200: #e0e0e0;
+  --bg-100: #0F1C2E;
+  --bg-200: #1f2b3e;
+  --bg-300: #374357;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 .body {
   width: 100%;
   min-height: 100vh;
   padding: 10px;
-  background-color: #EEE;
-  color: #333;
+  background-color: var(--bg-200);
+  color: var(--text-200);
   transition: all 0.4s ease-out;
 }
 
 html {
-  font-family: 'Roboto', sans-serif; /* Impostazione del font */
-  font-size: 18px; /* Aumento della dimensione del font di default */
-  color: #333333; /* Nuovo colore del testo, un grigio scuro */
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: var(--text-200);
   height: 100%;
   margin: 1;
   padding: 1;
@@ -25,11 +39,11 @@ html {
 }
 
 .container1 {
-  background-color:aquamarine;
+  background-color: var(--primary-300);
   width: 100%;
   min-height: 100vh;
   padding: 10px;
-  color: #333;
+  color: var(--text-200);
   transition: all 0.4s ease-out;
 }
 
@@ -41,7 +55,7 @@ html {
   width: 60px;
   height: 30px;
   border-radius: 30px;
-  background-color: #333;
+  background-color: var(--text-200);
   position: absolute;
   top: 50px;
   right: 50px;
@@ -56,7 +70,7 @@ html {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #EEE;
+  background: var(--bg-300);
   position: absolute;
   top: 50%;
   left: 3px;
@@ -66,19 +80,19 @@ html {
 
 /* Changing toggle button background when checked */
 #toggle:checked {
-  background: #03FFC0;
+  background: var(--accent-200);
 }
 
 /* Changing dot switch color and moving to the right side when checked */
 #toggle:checked::before {
-  background: #333;
+  background: var(--text-200);
   left: 32px;
 }
 
 /* Changing the background & font color when checked */
 #toggle:checked ~ .container {
-  background-color: #333;
-  color: #EEE;
+  background-color: var(--bg-200);
+  color: var(--text-200);
 }
 
 .language-switch {
@@ -88,37 +102,42 @@ html {
   height: 3vh;
 }
 
-.container2{
+.container2 {
   margin: 2%;
-  background-color: cadetblue;
-  border-radius: 10px  ;
-  border-color: black;
+  background-color: var(--accent-100);
+  border-radius: 10px;
+  border-color: var(--primary-100);
   align-self: center;
   justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2%; 
+  gap: 2%;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
 
-.container2 button{
-  flex:1;
+.container2 button {
+  flex: 1;
   max-width: 40%;
 }
 
-.btn-secondary,.btn-primary{
+.btn-secondary,
+.btn-primary {
   margin: 2%;
-  position:relative;
+  position: relative;
   justify-content: space-between;
 }
 
-.container, .container1, .container2 {
+.container,
+.container1,
+.container2 {
   margin: 10px;
   overflow: auto;
 }
 
-.container, .container1, .container2 {
-  border: 0.5px solid #ccc;
+.container,
+.container1,
+.container2 {
+  border: 0.5px solid var(--primary-200);
 }
