@@ -50,7 +50,7 @@ html {
 
 /* Toggle Button */
 #toggle {
-  -moz-appearance: none;
+  
   appearance:none;
   -webkit-appearance: none;
   -moz-appearance: none;

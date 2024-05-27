@@ -22,7 +22,7 @@
   min-height: 100vh;
   padding: 10px;
   background-color: var(--bg-200);
-  color: var(--primary-100);
+  color: var(-);
   transition: all 0.4s ease-out;
 
 }
@@ -50,8 +50,7 @@ html {
 
 /* Toggle Button */
 #toggle {
-  -moz-appearance: none;
-  appearance:none;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 60px;
