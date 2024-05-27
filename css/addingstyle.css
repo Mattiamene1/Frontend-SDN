@@ -21,16 +21,15 @@
   width: 100%;
   min-height: 100vh;
   padding: 10px;
-  background-color: var(--bg-200);
+  background-color: var(--bg-200)!important;
   color: var(--primary-100);
   transition: all 0.4s ease-out;
-
 }
 
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  color: var(--text-200);
+  color: var(--text-200)!important;
   height: 100%;
   margin: 1;
   padding: 1;
@@ -40,61 +39,12 @@ html {
 }
 
 .container1 {
-  background-color: var(--primary-300);
+  background-color: var(--primary-300)!important;
   width: 100%;
   min-height: 100vh;
   padding: 10px;
   color: var(--text-200);
   transition: all 0.4s ease-out;
-}
-
-/* Toggle Button */
-#toggle {
-  -moz-appearance: none;
-  appearance:none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 60px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: var(--text-200);
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  transition: all 0.5s ease-in;
-  cursor: pointer;
-  z-index: 1;
-}
-
-/* Making a dot switch inside the Toggle Button */
-#toggle::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: var(--bg-300);
-  position: absolute;
-  top: 50%;
-  left: 3px;
-  transform: translateY(-50%);
-  transition: all 0.5s ease-in;
-}
-
-/* Changing toggle button background when checked */
-#toggle:checked {
-  background: var(--accent-200);
-}
-
-/* Changing dot switch color and moving to the right side when checked */
-#toggle:checked::before {
-  background: var(--text-200);
-  left: 32px;
-}
-
-/* Changing the background & font color when checked */
-#toggle:checked ~ .container {
-  background-color: var(--bg-200);
-  color: var(--text-200);
 }
 
 .language-switch {
@@ -106,9 +56,9 @@ html {
 
 .container2 {
   margin: 2%;
-  background-color: var(--accent-100);
+  background-color: var(--accent-100)!important;
   border-radius: 10px;
-  border-color: var(--primary-100);
+  border-color: var(--primary-100)!important;
   align-self: center;
   justify-content: space-between;
   display: flex;
@@ -126,7 +76,7 @@ html {
 
 .btn-secondary,
 .btn-primary {
-  margin: 2%;
+  margin: 1%;
   position: relative;
   justify-content: space-between;
 }
@@ -134,12 +84,12 @@ html {
 .container,
 .container1,
 .container2 {
-  margin: 10px;
+  margin: 2px;
   overflow: auto;
 }
 
 .container,
 .container1,
 .container2 {
-  border: 0.5px solid var(--primary-200);
+  border: 0.5px solid var(--primary-200)!important;
 }
