@@ -1,3 +1,36 @@
+:root {
+  --primary-100: #1F3A5F;
+  --primary-200: #4d648d;
+  --primary-300: #acc2ef;
+  --accent-100: #3D5A80;
+  --accent-200: #cee8ff;
+  --text-100: var(--TEXT-100);
+  --text-200: #e0e0e0;
+  --bg-100: #0F1C2E;
+  --bg-200: #1f2b3e;
+  --bg-300: #374357;
+}
+
+.pallette1 {
+  color: var(--accent-100);
+  color: var(--accent-200);
+  color: var(--text-100);
+  color: var(--text-200);   
+  color: var(--bg-100);     
+  color: var(--bg-200);     
+  color: var(--bg-300);     
+  color: var(--primary-100); 
+  color: var(--primary-200); 
+  color: var(--primary-300);
+
+  color: gray;
+  color: red;
+
+  color: rgba(0, 0, 0, .125);
+  color: rgba(0, 0, 0, .2);
+
+}
+
 @font-face {
   font-family: next-font;
   src: url(../fonts/next-font.eot?-9scffx);
@@ -263,7 +296,7 @@
 .n-topology.n-topology-blue {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: var(--text-100);
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
   -o-user-select: none;
@@ -306,13 +339,13 @@
   pointer-events: all;
 }
 .n-topology.n-topology-blue defs .bg {
-  fill: #0386d2;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-blue defs .stroke {
-  stroke: #0386d2;
+  stroke: var(--primary-100);
 }
-.n-topology.n-topology-blue defs [fill*="#FFFFFF"] {
-  fill: #fff;
+.n-topology.n-topology-blue defs [fill*="var(--TEXT-100)"] {
+  fill: var(--text-100);
 }
 .n-topology.n-topology-blue .n-svg {
   border: none;
@@ -324,7 +357,7 @@
 }
 .n-topology.n-topology-blue .fontIcon {
   font-family: next-font;
-  fill: #0386d2;
+  fill: var(--primary-100);
   alignment-baseline: central;
   text-anchor: middle;
   speak: none;
@@ -344,10 +377,10 @@
   cursor: pointer;
 }
 .n-topology.n-topology-blue .iconBG {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-blue .iconBGActive {
-  fill: #0386d2;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-blue .node:not(.node-selected) .selectedBG {
   display: none;
@@ -355,16 +388,16 @@
 .n-topology.n-topology-blue .node .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f2ad4e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-blue .node .dot {
-  fill: #0386d2;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-blue .node text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #0386d2;
+  fill: var(--primary-100);
   pointer-events: none;
   -o-user-select: none;
   -webkit-user-select: none;
@@ -374,50 +407,50 @@
   font-size: 11px;
 }
 .n-topology.n-topology-blue .node.disable .node-label {
-  fill: #ccc !important;
+  fill: var(--text-200) !important;
 }
 .n-topology.n-topology-blue .node.disable .iconBG.iconBGActive,
 .n-topology.n-topology-blue .node.disable .showIcon .iconShape {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-blue .link line,
 .n-topology.n-topology-blue .link path {
-  stroke: #5bc1df;
+  stroke: var(--accent-100);
   stroke-width: 1px;
   fill: none;
   cursor: pointer;
 }
 .n-topology.n-topology-blue .link line.link:hover,
 .n-topology.n-topology-blue .link path.link:hover {
-  stroke: #26a1c5;
+  stroke: var(--primary-200);
 }
 .n-topology.n-topology-blue .link line.link_bg:hover ~ line {
-  stroke: #26a1c5 !important;
+  stroke: var(--primary-200) !important;
 }
 .n-topology.n-topology-blue .link .link-label {
   font-family: "Cisco Sans Reg";
-  fill: #0386d2;
+  fill: var(--primary-100);
   font-size: 12px;
 }
 .n-topology.n-topology-blue .link .source-abel,
 .n-topology.n-topology-blue .link .target-label {
   font-family: "Cisco Sans Reg";
-  fill: #0386d2;
+  fill: var(--primary-100);
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology.n-topology-blue .link .disable-label {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-blue .link .disable-bg {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-blue .link .link_bg {
   stroke: transparent;
 }
 .n-topology.n-topology-blue .link.disable line,
 .n-topology.n-topology-blue .link.disable path {
-  stroke: #ccc !important;
+  stroke: var(--text-200) !important;
   stroke-width: 1px;
 }
 .n-topology.n-topology-blue .link.disable .link_bg {
@@ -425,31 +458,31 @@
 }
 .n-topology.n-topology-blue .link.link-selected line,
 .n-topology.n-topology-blue .link.link-selected path {
-  stroke: #ccc;
+  stroke: var(--text-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-blue .nodeset .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f2ad4e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-blue .nodeset .dot {
-  fill: #fff;
-  stroke: #0386d2;
+  fill: var(--text-100);
+  stroke: var(--primary-100);
   stroke-width: 1;
 }
 .n-topology.n-topology-blue .nodeset .icon {
   cursor: pointer;
 }
 .n-topology.n-topology-blue .nodeset .bg {
-  fill: #0386d2;
+  fill: var(--primary-100);
   pointer-events: none;
 }
 .n-topology.n-topology-blue .nodeset text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #0386d2;
+  fill: var(--primary-100);
   -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -459,23 +492,23 @@
 }
 .n-topology.n-topology-blue .nodeset.disable {
   opacity: 0.3;
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-blue .nodeset .iconBG,
 .n-topology.n-topology-blue .nodeset .iconBGActive {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-blue .nodeset .iconBGActive ~ .iconShape {
   display: block !important;
 }
 .n-topology.n-topology-blue .nodeset .indicator .iconBG {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-blue .nodeset .indicator .iconBG:hover {
-  fill: #0386d2;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-blue .nodeset .indicator .iconShape {
-  fill: #0266a0;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-blue .group .bg {
   opacity: 0.6;
@@ -519,29 +552,29 @@
   opacity: 0.5;
 }
 .n-topology.n-topology-blue .link-set-bg {
-  stroke: #5bc1df;
+  stroke: var(--accent-100);
   stroke-width: 2px;
 }
 .n-topology.n-topology-blue .link-set-circle {
-  fill: #0386d2;
-  stroke: #0386d2;
+  fill: var(--primary-100);
+  stroke: var(--primary-100);
   stroke-width: 16px;
   stroke-linejoin: round;
 }
 .n-topology.n-topology-blue .link-set-text {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   text-anchor: middle;
   dominant-baseline: central;
   font-size: 12px;
   pointer-events: none;
 }
 .n-topology.n-topology-blue .link-set.disable .link-set-bg {
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-blue .link-set.disable .link-set-circle {
-  fill: #ccc;
-  stroke: #ccc;
+  fill: var(--text-200);
+  stroke: var(--text-200);
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .n-topology.n-topology-blue .link-set-circle,
@@ -550,21 +583,21 @@
   }
 }
 .n-topology.n-topology-blue .mapPath {
-  fill: #d6effe;
-  stroke: #ade0fe;
+  fill: var(--accent-200);
+  stroke: var(--primary-300);
   stroke-width: 1;
   opacity: 0.5;
   pointer-events: none;
 }
 .n-topology.n-topology-blue .mapBoundary {
   fill: none;
-  stroke: #ade0fe;
+  stroke: var(--primary-300);
   stroke-width: 1;
   pointer-events: none;
 }
 .n-topology.n-topology-blue .selectionRect {
-  stroke: #0386d2;
-  fill: #0386d2;
+  stroke: var(--primary-100);
+  fill: var(--primary-100);
   fill-opacity: 0.1;
   pointer-events: none;
 }
@@ -572,13 +605,13 @@
   max-width: none !important;
 }
 .n-topology.n-topology-blue .aggregationGroup .aggregationText {
-  fill: #0386d2;
+  fill: var(--primary-100);
   font-size: 12px;
 }
 .n-topology.n-topology-blue .aggregationGroup .aggregationRect {
-  fill: #0386d2;
+  fill: var(--primary-100);
   opacity: 0.2;
-  stroke: #0386d2;
+  stroke: var(--primary-100);
   stroke-width: 3;
   stroke-linejoin: round;
   pointer-events: none;
@@ -649,28 +682,28 @@
   cursor: pointer;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  background: #eaeaea;
+  background: var(--bg-300);
   margin-top: -2px;
 }
 .n-topology.n-topology-blue .n-topology-nav-mode li:hover span {
-  color: #0386d2;
+  color: var(--primary-100);
 }
 .n-topology.n-topology-blue .n-topology-nav-mode span {
-  color: #999;
+  color: var(--PRIMARY-200);
   display: inline-block;
   font-size: 18px;
 }
 .n-topology.n-topology-blue .n-topology-nav-mode-selected {
-  background: #0386d2 !important;
+  background: var(--primary-100) !important;
 }
 .n-topology.n-topology-blue .n-topology-nav-mode-selected span {
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-blue .n-topology-nav-mode-selected:hover {
-  background: #0386d2 !important;
+  background: var(--primary-100) !important;
 }
 .n-topology.n-topology-blue .n-topology-nav-mode-selected:hover span {
-  color: #fff !important;
+  color: var(--text-100) !important;
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom {
   position: relative;
@@ -682,8 +715,8 @@
   position: absolute;
   text-align: center;
   font-size: 25px;
-  color: #999;
-  background: #eaeaea;
+  color: var(--PRIMARY-200);
+  background: var(--bg-300);
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-in {
   top: 0;
@@ -692,7 +725,7 @@
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-in:hover {
   color: gray;
-  background: #d8d8d8;
+  background: var(--text-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-out {
   top: 25px;
@@ -701,28 +734,28 @@
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-out:hover {
   color: gray;
-  background: #d8d8d8;
+  background: var(--text-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-selection {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-selection:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-zoom-selection-selected {
-  color: #3fb7fc;
+  color: var(--accent-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-fit {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-fit:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-agr {
   cursor: pointer;
@@ -730,11 +763,11 @@
   text-align: center;
   font-size: 20px;
   height: 24px;
-  color: #999;
+  color: var(--PRIMARY-200);
   display: none;
 }
 .n-topology.n-topology-blue .n-topology-nav-agr:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 @-webkit-keyframes agr-icon-ani {
   0% {
@@ -751,11 +784,11 @@
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
   -webkit-transition: 0 none;
-  color: #0396eb;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-blue .n-topology-nav .agr-text {
   font-size: 10px;
-  color: #eaeaea;
+  color: var(--bg-300);
   position: absolute;
   left: 10px;
   margin-top: -1px;
@@ -765,28 +798,28 @@
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-full:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-setting {
   cursor: pointer;
   text-align: center;
-  color: #999;
+  color: var(--PRIMARY-200);
   line-height: 1;
   -webkit-transition: none 0 !important;
   transition: none 0 !important;
 }
 .n-topology.n-topology-blue .n-topology-nav-setting:hover {
   opacity: 1;
-  color: #0396eb;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-blue .n-topology-nav-setting-icon {
   font-size: 20px;
 }
 .n-topology.n-topology-blue .n-topology-nav-setting-icon-selected {
-  color: #0396eb;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-blue .n-topology-loading {
   overflow: hidden;
@@ -826,7 +859,7 @@
   list-style: none;
 }
 .n-topology.n-topology-blue .n-topology-loading li:after {
-  background: #0386d2;
+  background: var(--primary-100);
 }
 .n-topology.n-topology-blue .n-topology-loading li:nth-child(1) {
   -webkit-transform: rotate(0deg);
@@ -931,7 +964,7 @@
 .n-topology.n-topology-dark {
   position: relative;
   overflow: hidden;
-  background: #000;
+  background: var(--BG-100);
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
   -o-user-select: none;
@@ -974,13 +1007,13 @@
   pointer-events: all;
 }
 .n-topology.n-topology-dark defs .bg {
-  fill: #00a9ff;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-dark defs .stroke {
-  stroke: #00a9ff;
+  stroke: var(--primary-100);
 }
-.n-topology.n-topology-dark defs [fill*="#FFFFFF"] {
-  fill: #000;
+.n-topology.n-topology-dark defs [fill*="var(--TEXT-100)"] {
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-dark .n-svg {
   border: none;
@@ -992,7 +1025,7 @@
 }
 .n-topology.n-topology-dark .fontIcon {
   font-family: next-font;
-  fill: #00a9ff;
+  fill: var(--primary-100);
   alignment-baseline: central;
   text-anchor: middle;
   speak: none;
@@ -1012,10 +1045,10 @@
   cursor: pointer;
 }
 .n-topology.n-topology-dark .iconBG {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-dark .iconBGActive {
-  fill: #00a9ff;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-dark .node:not(.node-selected) .selectedBG {
   display: none;
@@ -1023,16 +1056,16 @@
 .n-topology.n-topology-dark .node .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f7931e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-dark .node .dot {
-  fill: #00a9ff;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-dark .node text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #00a9ff;
+  fill: var(--primary-100);
   pointer-events: none;
   -o-user-select: none;
   -webkit-user-select: none;
@@ -1042,50 +1075,50 @@
   font-size: 11px;
 }
 .n-topology.n-topology-dark .node.disable .node-label {
-  fill: #ccc !important;
+  fill: var(--text-200) !important;
 }
 .n-topology.n-topology-dark .node.disable .iconBG.iconBGActive,
 .n-topology.n-topology-dark .node.disable .showIcon .iconShape {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-dark .link line,
 .n-topology.n-topology-dark .link path {
-  stroke: #09cadd;
+  stroke: var(--accent-200);
   stroke-width: 1px;
   fill: none;
   cursor: pointer;
 }
 .n-topology.n-topology-dark .link line.link:hover,
 .n-topology.n-topology-dark .link path.link:hover {
-  stroke: #068591;
+  stroke: var(--PRIMARY-200);
 }
 .n-topology.n-topology-dark .link line.link_bg:hover ~ line {
-  stroke: #068591 !important;
+  stroke: var(--PRIMARY-200) !important;
 }
 .n-topology.n-topology-dark .link .link-label {
   font-family: "Cisco Sans Reg";
-  fill: #00a9ff;
+  fill: var(--primary-100);
   font-size: 12px;
 }
 .n-topology.n-topology-dark .link .source-abel,
 .n-topology.n-topology-dark .link .target-label {
   font-family: "Cisco Sans Reg";
-  fill: #00a9ff;
+  fill: var(--primary-100);
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology.n-topology-dark .link .disable-label {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-dark .link .disable-bg {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-dark .link .link_bg {
   stroke: transparent;
 }
 .n-topology.n-topology-dark .link.disable line,
 .n-topology.n-topology-dark .link.disable path {
-  stroke: #ccc !important;
+  stroke: var(--text-200) !important;
   stroke-width: 1px;
 }
 .n-topology.n-topology-dark .link.disable .link_bg {
@@ -1093,31 +1126,31 @@
 }
 .n-topology.n-topology-dark .link.link-selected line,
 .n-topology.n-topology-dark .link.link-selected path {
-  stroke: #ccc;
+  stroke: var(--text-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-dark .nodeset .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f7931e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-dark .nodeset .dot {
-  fill: #000;
-  stroke: #00a9ff;
+  fill: var(--BG-100);
+  stroke: var(--primary-100);
   stroke-width: 1;
 }
 .n-topology.n-topology-dark .nodeset .icon {
   cursor: pointer;
 }
 .n-topology.n-topology-dark .nodeset .bg {
-  fill: #00a9ff;
+  fill: var(--primary-100);
   pointer-events: none;
 }
 .n-topology.n-topology-dark .nodeset text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #00a9ff;
+  fill: var(--primary-100);
   -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1127,20 +1160,20 @@
 }
 .n-topology.n-topology-dark .nodeset.disable {
   opacity: 0.3;
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-dark .nodeset .iconBG,
 .n-topology.n-topology-dark .nodeset .iconBGActive {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-dark .nodeset .iconBGActive ~ .iconShape {
   display: block !important;
 }
 .n-topology.n-topology-dark .nodeset .indicator .iconBG {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-dark .nodeset .indicator .iconBG:hover {
-  fill: #00a9ff;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-dark .nodeset .indicator .iconShape {
   fill: #0087cc;
@@ -1187,29 +1220,29 @@
   opacity: 0.5;
 }
 .n-topology.n-topology-dark .link-set-bg {
-  stroke: #09cadd;
+  stroke: var(--accent-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-dark .link-set-circle {
-  fill: #00a9ff;
-  stroke: #00a9ff;
+  fill: var(--primary-100);
+  stroke: var(--primary-100);
   stroke-width: 16px;
   stroke-linejoin: round;
 }
 .n-topology.n-topology-dark .link-set-text {
   font-family: "Cisco Sans Reg";
-  fill: #000;
+  fill: var(--BG-100);
   text-anchor: middle;
   dominant-baseline: central;
   font-size: 12px;
   pointer-events: none;
 }
 .n-topology.n-topology-dark .link-set.disable .link-set-bg {
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-dark .link-set.disable .link-set-circle {
-  fill: #ccc;
-  stroke: #ccc;
+  fill: var(--text-200);
+  stroke: var(--text-200);
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .n-topology.n-topology-dark .link-set-circle,
@@ -1218,21 +1251,21 @@
   }
 }
 .n-topology.n-topology-dark .mapPath {
-  fill: #fff;
-  stroke: #d6f1ff;
+  fill: var(--text-100);
+  stroke: var(--accent-200);
   stroke-width: 1;
   opacity: 0.5;
   pointer-events: none;
 }
 .n-topology.n-topology-dark .mapBoundary {
   fill: none;
-  stroke: #d6f1ff;
+  stroke: var(--accent-200);
   stroke-width: 1;
   pointer-events: none;
 }
 .n-topology.n-topology-dark .selectionRect {
-  stroke: #00a9ff;
-  fill: #00a9ff;
+  stroke: var(--primary-100);
+  fill: var(--primary-100);
   fill-opacity: 0.1;
   pointer-events: none;
 }
@@ -1240,13 +1273,13 @@
   max-width: none !important;
 }
 .n-topology.n-topology-dark .aggregationGroup .aggregationText {
-  fill: #00a9ff;
+  fill: var(--primary-100);
   font-size: 12px;
 }
 .n-topology.n-topology-dark .aggregationGroup .aggregationRect {
-  fill: #00a9ff;
+  fill: var(--primary-100);
   opacity: 0.2;
-  stroke: #00a9ff;
+  stroke: var(--primary-100);
   stroke-width: 3;
   stroke-linejoin: round;
   pointer-events: none;
@@ -1317,28 +1350,28 @@
   cursor: pointer;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  background: #333;
+  background: var(--BG-200);
   margin-top: -2px;
 }
 .n-topology.n-topology-dark .n-topology-nav-mode li:hover span {
-  color: #00a9ff;
+  color: var(--primary-100);
 }
 .n-topology.n-topology-dark .n-topology-nav-mode span {
-  color: #666;
+  color: var(--PRIMARY-100);
   display: inline-block;
   font-size: 18px;
 }
 .n-topology.n-topology-dark .n-topology-nav-mode-selected {
-  background: #00a9ff !important;
+  background: var(--primary-100) !important;
 }
 .n-topology.n-topology-dark .n-topology-nav-mode-selected span {
-  color: #000;
+  color: var(--BG-100);
 }
 .n-topology.n-topology-dark .n-topology-nav-mode-selected:hover {
-  background: #00a9ff !important;
+  background: var(--primary-100) !important;
 }
 .n-topology.n-topology-dark .n-topology-nav-mode-selected:hover span {
-  color: #000 !important;
+  color: var(--BG-100) !important;
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom {
   position: relative;
@@ -1350,8 +1383,8 @@
   position: absolute;
   text-align: center;
   font-size: 25px;
-  color: #666;
-  background: #333;
+  color: var(--PRIMARY-100);
+  background: var(--BG-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-in {
   top: 0;
@@ -1359,8 +1392,8 @@
   cursor: pointer;
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-in:hover {
-  color: #b3b3b3;
-  background: #4d4d4d;
+  color: var(--text-200);
+  background: var(--bg-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-out {
   top: 25px;
@@ -1368,29 +1401,29 @@
   cursor: pointer;
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-out:hover {
-  color: #b3b3b3;
-  background: #4d4d4d;
+  color: var(--text-200);
+  background: var(--bg-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-selection {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-selection:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-zoom-selection-selected {
-  color: #66cbff;
+  color: var(--primary-300);
 }
 .n-topology.n-topology-dark .n-topology-nav-fit {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-dark .n-topology-nav-fit:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-agr {
   cursor: pointer;
@@ -1398,11 +1431,11 @@
   text-align: center;
   font-size: 20px;
   height: 24px;
-  color: #666;
+  color: var(--PRIMARY-100);
   display: none;
 }
 .n-topology.n-topology-dark .n-topology-nav-agr:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 @-webkit-keyframes agr-icon-ani {
   0% {
@@ -1419,11 +1452,11 @@
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
   -webkit-transition: 0 none;
-  color: #1ab2ff;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-dark .n-topology-nav .agr-text {
   font-size: 10px;
-  color: #333;
+  color: var(--BG-200);
   position: absolute;
   left: 10px;
   margin-top: -1px;
@@ -1433,28 +1466,28 @@
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-dark .n-topology-nav-full:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-setting {
   cursor: pointer;
   text-align: center;
-  color: #666;
+  color: var(--PRIMARY-100);
   line-height: 1;
   -webkit-transition: none 0 !important;
   transition: none 0 !important;
 }
 .n-topology.n-topology-dark .n-topology-nav-setting:hover {
   opacity: 1;
-  color: #1ab2ff;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-dark .n-topology-nav-setting-icon {
   font-size: 20px;
 }
 .n-topology.n-topology-dark .n-topology-nav-setting-icon-selected {
-  color: #1ab2ff;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-dark .n-topology-loading {
   overflow: hidden;
@@ -1494,7 +1527,7 @@
   list-style: none;
 }
 .n-topology.n-topology-dark .n-topology-loading li:after {
-  background: #00a9ff;
+  background: var(--primary-100);
 }
 .n-topology.n-topology-dark .n-topology-loading li:nth-child(1) {
   -webkit-transform: rotate(0deg);
@@ -1599,7 +1632,7 @@
 .n-topology.n-topology-green {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: var(--text-100);
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
   -o-user-select: none;
@@ -1642,13 +1675,13 @@
   pointer-events: all;
 }
 .n-topology.n-topology-green defs .bg {
-  fill: #26999e;
+  fill: var(--accent-200);
 }
 .n-topology.n-topology-green defs .stroke {
-  stroke: #26999e;
+  stroke: var(--accent-200);
 }
-.n-topology.n-topology-green defs [fill*="#FFFFFF"] {
-  fill: #fff;
+.n-topology.n-topology-green defs [fill*="var(--TEXT-100)"] {
+  fill: var(--text-100);
 }
 .n-topology.n-topology-green .n-svg {
   border: none;
@@ -1660,7 +1693,7 @@
 }
 .n-topology.n-topology-green .fontIcon {
   font-family: next-font;
-  fill: #26999e;
+  fill: var(--accent-200);
   alignment-baseline: central;
   text-anchor: middle;
   speak: none;
@@ -1680,10 +1713,10 @@
   cursor: pointer;
 }
 .n-topology.n-topology-green .iconBG {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-green .iconBGActive {
-  fill: #26999e;
+  fill: var(--accent-200);
 }
 .n-topology.n-topology-green .node:not(.node-selected) .selectedBG {
   display: none;
@@ -1691,16 +1724,16 @@
 .n-topology.n-topology-green .node .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f2ad4e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-green .node .dot {
-  fill: #26999e;
+  fill: var(--accent-200);
 }
 .n-topology.n-topology-green .node text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #26999e;
+  fill: var(--accent-200);
   pointer-events: none;
   -o-user-select: none;
   -webkit-user-select: none;
@@ -1710,50 +1743,50 @@
   font-size: 11px;
 }
 .n-topology.n-topology-green .node.disable .node-label {
-  fill: #ccc !important;
+  fill: var(--text-200) !important;
 }
 .n-topology.n-topology-green .node.disable .iconBG.iconBGActive,
 .n-topology.n-topology-green .node.disable .showIcon .iconShape {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-green .link line,
 .n-topology.n-topology-green .link path {
-  stroke: #5edadd;
+  stroke: var(--accent-200);
   stroke-width: 1px;
   fill: none;
   cursor: pointer;
 }
 .n-topology.n-topology-green .link line.link:hover,
 .n-topology.n-topology-green .link path.link:hover {
-  stroke: #29bfc3;
+  stroke: var(--accent-100);
 }
 .n-topology.n-topology-green .link line.link_bg:hover ~ line {
-  stroke: #29bfc3 !important;
+  stroke: var(--accent-100) !important;
 }
 .n-topology.n-topology-green .link .link-label {
   font-family: "Cisco Sans Reg";
-  fill: #26999e;
+  fill: var(--accent-200);
   font-size: 12px;
 }
 .n-topology.n-topology-green .link .source-abel,
 .n-topology.n-topology-green .link .target-label {
   font-family: "Cisco Sans Reg";
-  fill: #26999e;
+  fill: var(--accent-200);
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology.n-topology-green .link .disable-label {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-green .link .disable-bg {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-green .link .link_bg {
   stroke: transparent;
 }
 .n-topology.n-topology-green .link.disable line,
 .n-topology.n-topology-green .link.disable path {
-  stroke: #ccc !important;
+  stroke: var(--text-200) !important;
   stroke-width: 1px;
 }
 .n-topology.n-topology-green .link.disable .link_bg {
@@ -1761,31 +1794,31 @@
 }
 .n-topology.n-topology-green .link.link-selected line,
 .n-topology.n-topology-green .link.link-selected path {
-  stroke: #ccc;
+  stroke: var(--text-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-green .nodeset .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f2ad4e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-green .nodeset .dot {
-  fill: #fff;
-  stroke: #26999e;
+  fill: var(--text-100);
+  stroke: var(--accent-200);
   stroke-width: 1;
 }
 .n-topology.n-topology-green .nodeset .icon {
   cursor: pointer;
 }
 .n-topology.n-topology-green .nodeset .bg {
-  fill: #26999e;
+  fill: var(--accent-200);
   pointer-events: none;
 }
 .n-topology.n-topology-green .nodeset text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #26999e;
+  fill: var(--accent-200);
   -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1795,23 +1828,23 @@
 }
 .n-topology.n-topology-green .nodeset.disable {
   opacity: 0.3;
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-green .nodeset .iconBG,
 .n-topology.n-topology-green .nodeset .iconBGActive {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-green .nodeset .iconBGActive ~ .iconShape {
   display: block !important;
 }
 .n-topology.n-topology-green .nodeset .indicator .iconBG {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-green .nodeset .indicator .iconBG:hover {
-  fill: #26999e;
+  fill: var(--accent-200);
 }
 .n-topology.n-topology-green .nodeset .indicator .iconShape {
-  fill: #1c7175;
+  fill: var(--bg-300);
 }
 .n-topology.n-topology-green .group .bg {
   opacity: 0.6;
@@ -1855,29 +1888,29 @@
   opacity: 0.5;
 }
 .n-topology.n-topology-green .link-set-bg {
-  stroke: #5edadd;
+  stroke: var(--accent-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-green .link-set-circle {
-  fill: #26999e;
-  stroke: #26999e;
+  fill: var(--accent-200);
+  stroke: var(--accent-200);
   stroke-width: 16px;
   stroke-linejoin: round;
 }
 .n-topology.n-topology-green .link-set-text {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   text-anchor: middle;
   dominant-baseline: central;
   font-size: 12px;
   pointer-events: none;
 }
 .n-topology.n-topology-green .link-set.disable .link-set-bg {
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-green .link-set.disable .link-set-circle {
-  fill: #ccc;
-  stroke: #ccc;
+  fill: var(--text-200);
+  stroke: var(--text-200);
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .n-topology.n-topology-green .link-set-circle,
@@ -1887,20 +1920,20 @@
 }
 .n-topology.n-topology-green .mapPath {
   fill: #cff2f4;
-  stroke: #afe9ec;
+  stroke: var(--primary-300);
   stroke-width: 1;
   opacity: 0.5;
   pointer-events: none;
 }
 .n-topology.n-topology-green .mapBoundary {
   fill: none;
-  stroke: #afe9ec;
+  stroke: var(--primary-300);
   stroke-width: 1;
   pointer-events: none;
 }
 .n-topology.n-topology-green .selectionRect {
-  stroke: #26999e;
-  fill: #26999e;
+  stroke: var(--accent-200);
+  fill: var(--accent-200);
   fill-opacity: 0.1;
   pointer-events: none;
 }
@@ -1908,13 +1941,13 @@
   max-width: none !important;
 }
 .n-topology.n-topology-green .aggregationGroup .aggregationText {
-  fill: #26999e;
+  fill: var(--accent-200);
   font-size: 12px;
 }
 .n-topology.n-topology-green .aggregationGroup .aggregationRect {
-  fill: #26999e;
+  fill: var(--accent-200);
   opacity: 0.2;
-  stroke: #26999e;
+  stroke: var(--accent-200);
   stroke-width: 3;
   stroke-linejoin: round;
   pointer-events: none;
@@ -1985,28 +2018,28 @@
   cursor: pointer;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  background: #eaeaea;
+  background: var(--bg-300);
   margin-top: -2px;
 }
 .n-topology.n-topology-green .n-topology-nav-mode li:hover span {
-  color: #26999e;
+  color: var(--accent-200);
 }
 .n-topology.n-topology-green .n-topology-nav-mode span {
-  color: #999;
+  color: var(--PRIMARY-200);
   display: inline-block;
   font-size: 18px;
 }
 .n-topology.n-topology-green .n-topology-nav-mode-selected {
-  background: #26999e !important;
+  background: var(--accent-200) !important;
 }
 .n-topology.n-topology-green .n-topology-nav-mode-selected span {
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-green .n-topology-nav-mode-selected:hover {
-  background: #26999e !important;
+  background: var(--accent-200) !important;
 }
 .n-topology.n-topology-green .n-topology-nav-mode-selected:hover span {
-  color: #fff !important;
+  color: var(--text-100) !important;
 }
 .n-topology.n-topology-green .n-topology-nav-zoom {
   position: relative;
@@ -2018,8 +2051,8 @@
   position: absolute;
   text-align: center;
   font-size: 25px;
-  color: #999;
-  background: #eaeaea;
+  color: var(--PRIMARY-200);
+  background: var(--bg-300);
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-in {
   top: 0;
@@ -2028,7 +2061,7 @@
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-in:hover {
   color: gray;
-  background: #d8d8d8;
+  background: var(--text-200);
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-out {
   top: 25px;
@@ -2037,28 +2070,28 @@
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-out:hover {
   color: gray;
-  background: #d8d8d8;
+  background: var(--text-200);
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-selection {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-selection:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-green .n-topology-nav-zoom-selection-selected {
-  color: #54d0d6;
+  color: var(--accent-200);
 }
 .n-topology.n-topology-green .n-topology-nav-fit {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-green .n-topology-nav-fit:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-green .n-topology-nav-agr {
   cursor: pointer;
@@ -2066,11 +2099,11 @@
   text-align: center;
   font-size: 20px;
   height: 24px;
-  color: #999;
+  color: var(--PRIMARY-200);
   display: none;
 }
 .n-topology.n-topology-green .n-topology-nav-agr:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 @-webkit-keyframes agr-icon-ani {
   0% {
@@ -2087,11 +2120,11 @@
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
   -webkit-transition: 0 none;
-  color: #2badb3;
+  color: var(--accent-100);
 }
 .n-topology.n-topology-green .n-topology-nav .agr-text {
   font-size: 10px;
-  color: #eaeaea;
+  color: var(--bg-300);
   position: absolute;
   left: 10px;
   margin-top: -1px;
@@ -2101,28 +2134,28 @@
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  color: #999;
+  color: var(--PRIMARY-200);
 }
 .n-topology.n-topology-green .n-topology-nav-full:hover {
-  color: #4d4d4d;
+  color: var(--bg-200);
 }
 .n-topology.n-topology-green .n-topology-nav-setting {
   cursor: pointer;
   text-align: center;
-  color: #999;
+  color: var(--PRIMARY-200);
   line-height: 1;
   -webkit-transition: none 0 !important;
   transition: none 0 !important;
 }
 .n-topology.n-topology-green .n-topology-nav-setting:hover {
   opacity: 1;
-  color: #2badb3;
+  color: var(--accent-100);
 }
 .n-topology.n-topology-green .n-topology-nav-setting-icon {
   font-size: 20px;
 }
 .n-topology.n-topology-green .n-topology-nav-setting-icon-selected {
-  color: #2badb3;
+  color: var(--accent-100);
 }
 .n-topology.n-topology-green .n-topology-loading {
   overflow: hidden;
@@ -2162,7 +2195,7 @@
   list-style: none;
 }
 .n-topology.n-topology-green .n-topology-loading li:after {
-  background: #26999e;
+  background: var(--accent-200);
 }
 .n-topology.n-topology-green .n-topology-loading li:nth-child(1) {
   -webkit-transform: rotate(0deg);
@@ -2267,7 +2300,7 @@
 .n-topology.n-topology-slate {
   position: relative;
   overflow: hidden;
-  background: #223343;
+  background: var(--BG-100);
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
   -o-user-select: none;
@@ -2310,13 +2343,13 @@
   pointer-events: all;
 }
 .n-topology.n-topology-slate defs .bg {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-slate defs .stroke {
-  stroke: #fff;
+  stroke: var(--text-100);
 }
-.n-topology.n-topology-slate defs [fill*="#FFFFFF"] {
-  fill: #223343;
+.n-topology.n-topology-slate defs [fill*="var(--TEXT-100)"] {
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-slate .n-svg {
   border: none;
@@ -2328,7 +2361,7 @@
 }
 .n-topology.n-topology-slate .fontIcon {
   font-family: next-font;
-  fill: #fff;
+  fill: var(--text-100);
   alignment-baseline: central;
   text-anchor: middle;
   speak: none;
@@ -2348,10 +2381,10 @@
   cursor: pointer;
 }
 .n-topology.n-topology-slate .iconBG {
-  fill: #223343;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-slate .iconBGActive {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-slate .node:not(.node-selected) .selectedBG {
   display: none;
@@ -2359,16 +2392,16 @@
 .n-topology.n-topology-slate .node .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f7931e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-slate .node .dot {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-slate .node text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   pointer-events: none;
   -o-user-select: none;
   -webkit-user-select: none;
@@ -2378,50 +2411,50 @@
   font-size: 11px;
 }
 .n-topology.n-topology-slate .node.disable .node-label {
-  fill: #ccc !important;
+  fill: var(--text-200) !important;
 }
 .n-topology.n-topology-slate .node.disable .iconBG.iconBGActive,
 .n-topology.n-topology-slate .node.disable .showIcon .iconShape {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-slate .link line,
 .n-topology.n-topology-slate .link path {
-  stroke: #49a9bf;
+  stroke:var(--primary-200);
   stroke-width: 1px;
   fill: none;
   cursor: pointer;
 }
 .n-topology.n-topology-slate .link line.link:hover,
 .n-topology.n-topology-slate .link path.link:hover {
-  stroke: #307889;
+  stroke: var(--PRIMARY-100);
 }
 .n-topology.n-topology-slate .link line.link_bg:hover ~ line {
-  stroke: #307889 !important;
+  stroke: var(--PRIMARY-100) !important;
 }
 .n-topology.n-topology-slate .link .link-label {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   font-size: 12px;
 }
 .n-topology.n-topology-slate .link .source-abel,
 .n-topology.n-topology-slate .link .target-label {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology.n-topology-slate .link .disable-label {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-slate .link .disable-bg {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-slate .link .link_bg {
   stroke: transparent;
 }
 .n-topology.n-topology-slate .link.disable line,
 .n-topology.n-topology-slate .link.disable path {
-  stroke: #ccc !important;
+  stroke: var(--text-200) !important;
   stroke-width: 1px;
 }
 .n-topology.n-topology-slate .link.disable .link_bg {
@@ -2429,31 +2462,31 @@
 }
 .n-topology.n-topology-slate .link.link-selected line,
 .n-topology.n-topology-slate .link.link-selected path {
-  stroke: #ccc;
+  stroke: var(--text-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-slate .nodeset .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #f7931e;
+  stroke: var(--accent-100);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-slate .nodeset .dot {
-  fill: #223343;
-  stroke: #fff;
+  fill: var(--BG-100);
+  stroke: var(--text-100);
   stroke-width: 1;
 }
 .n-topology.n-topology-slate .nodeset .icon {
   cursor: pointer;
 }
 .n-topology.n-topology-slate .nodeset .bg {
-  fill: #fff;
+  fill: var(--text-100);
   pointer-events: none;
 }
 .n-topology.n-topology-slate .nodeset text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #fff;
+  fill: var(--text-100);
   -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2463,23 +2496,23 @@
 }
 .n-topology.n-topology-slate .nodeset.disable {
   opacity: 0.3;
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-slate .nodeset .iconBG,
 .n-topology.n-topology-slate .nodeset .iconBGActive {
-  fill: #223343;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-slate .nodeset .iconBGActive ~ .iconShape {
   display: block !important;
 }
 .n-topology.n-topology-slate .nodeset .indicator .iconBG {
-  fill: #223343;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-slate .nodeset .indicator .iconBG:hover {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-slate .nodeset .indicator .iconShape {
-  fill: #e6e6e6;
+  fill: var(--bg-300);
 }
 .n-topology.n-topology-slate .group .bg {
   opacity: 0.6;
@@ -2523,29 +2556,29 @@
   opacity: 0.5;
 }
 .n-topology.n-topology-slate .link-set-bg {
-  stroke: #49a9bf;
+  stroke:var(--primary-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-slate .link-set-circle {
-  fill: #fff;
-  stroke: #fff;
+  fill: var(--text-100);
+  stroke: var(--text-100);
   stroke-width: 16px;
   stroke-linejoin: round;
 }
 .n-topology.n-topology-slate .link-set-text {
   font-family: "Cisco Sans Reg";
-  fill: #223343;
+  fill: var(--BG-100);
   text-anchor: middle;
   dominant-baseline: central;
   font-size: 12px;
   pointer-events: none;
 }
 .n-topology.n-topology-slate .link-set.disable .link-set-bg {
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-slate .link-set.disable .link-set-circle {
-  fill: #ccc;
-  stroke: #ccc;
+  fill: var(--text-200);
+  stroke: var(--text-200);
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .n-topology.n-topology-slate .link-set-circle,
@@ -2554,21 +2587,21 @@
   }
 }
 .n-topology.n-topology-slate .mapPath {
-  fill: #fff;
-  stroke: #eee;
+  fill: var(--text-100);
+  stroke: var(--text-200);
   stroke-width: 1;
   opacity: 0.5;
   pointer-events: none;
 }
 .n-topology.n-topology-slate .mapBoundary {
   fill: none;
-  stroke: #eee;
+  stroke: var(--text-200);
   stroke-width: 1;
   pointer-events: none;
 }
 .n-topology.n-topology-slate .selectionRect {
-  stroke: #fff;
-  fill: #fff;
+  stroke: var(--text-100);
+  fill: var(--text-100);
   fill-opacity: 0.1;
   pointer-events: none;
 }
@@ -2576,13 +2609,13 @@
   max-width: none !important;
 }
 .n-topology.n-topology-slate .aggregationGroup .aggregationText {
-  fill: #fff;
+  fill: var(--text-100);
   font-size: 12px;
 }
 .n-topology.n-topology-slate .aggregationGroup .aggregationRect {
-  fill: #fff;
+  fill: var(--text-100);
   opacity: 0.2;
-  stroke: #fff;
+  stroke: var(--text-100);
   stroke-width: 3;
   stroke-linejoin: round;
   pointer-events: none;
@@ -2653,28 +2686,28 @@
   cursor: pointer;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  background: #446787;
+  background: var(--BG-200);
   margin-top: -2px;
 }
 .n-topology.n-topology-slate .n-topology-nav-mode li:hover span {
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-nav-mode span {
-  color: #888;
+  color: var(--PRIMARY-300);
   display: inline-block;
   font-size: 18px;
 }
 .n-topology.n-topology-slate .n-topology-nav-mode-selected {
-  background: #fff !important;
+  background: var(--text-100) !important;
 }
 .n-topology.n-topology-slate .n-topology-nav-mode-selected span {
-  color: #223343;
+  color: var(--BG-100);
 }
 .n-topology.n-topology-slate .n-topology-nav-mode-selected:hover {
-  background: #fff !important;
+  background: var(--text-100) !important;
 }
 .n-topology.n-topology-slate .n-topology-nav-mode-selected:hover span {
-  color: #223343 !important;
+  color: var(--BG-100) !important;
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom {
   position: relative;
@@ -2686,8 +2719,8 @@
   position: absolute;
   text-align: center;
   font-size: 25px;
-  color: #888;
-  background: #446787;
+  color: var(--PRIMARY-300);
+  background: var(--BG-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-in {
   top: 0;
@@ -2695,8 +2728,8 @@
   cursor: pointer;
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-in:hover {
-  color: #d5d5d5;
-  background: #5680a8;
+  color: var(--text-200);
+  background: var(--primary-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-out {
   top: 25px;
@@ -2704,29 +2737,29 @@
   cursor: pointer;
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-out:hover {
-  color: #d5d5d5;
-  background: #5680a8;
+  color: var(--text-200);
+  background: var(--primary-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-selection {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #888;
+  color: var(--PRIMARY-300);
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-selection:hover {
-  color: #d5d5d5;
+  color: var(--text-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-zoom-selection-selected {
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-nav-fit {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #888;
+  color: var(--PRIMARY-300);
 }
 .n-topology.n-topology-slate .n-topology-nav-fit:hover {
-  color: #d5d5d5;
+  color: var(--text-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-agr {
   cursor: pointer;
@@ -2734,11 +2767,11 @@
   text-align: center;
   font-size: 20px;
   height: 24px;
-  color: #888;
+  color: var(--PRIMARY-300);
   display: none;
 }
 .n-topology.n-topology-slate .n-topology-nav-agr:hover {
-  color: #d5d5d5;
+  color: var(--text-200);
 }
 @-webkit-keyframes agr-icon-ani {
   0% {
@@ -2755,11 +2788,11 @@
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
   -webkit-transition: 0 none;
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-nav .agr-text {
   font-size: 10px;
-  color: #446787;
+  color: var(--BG-200);
   position: absolute;
   left: 10px;
   margin-top: -1px;
@@ -2769,28 +2802,28 @@
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  color: #888;
+  color: var(--PRIMARY-300);
 }
 .n-topology.n-topology-slate .n-topology-nav-full:hover {
-  color: #d5d5d5;
+  color: var(--text-200);
 }
 .n-topology.n-topology-slate .n-topology-nav-setting {
   cursor: pointer;
   text-align: center;
-  color: #888;
+  color: var(--PRIMARY-300);
   line-height: 1;
   -webkit-transition: none 0 !important;
   transition: none 0 !important;
 }
 .n-topology.n-topology-slate .n-topology-nav-setting:hover {
   opacity: 1;
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-nav-setting-icon {
   font-size: 20px;
 }
 .n-topology.n-topology-slate .n-topology-nav-setting-icon-selected {
-  color: #fff;
+  color: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-loading {
   overflow: hidden;
@@ -2830,7 +2863,7 @@
   list-style: none;
 }
 .n-topology.n-topology-slate .n-topology-loading li:after {
-  background: #fff;
+  background: var(--text-100);
 }
 .n-topology.n-topology-slate .n-topology-loading li:nth-child(1) {
   -webkit-transform: rotate(0deg);
@@ -2935,7 +2968,7 @@
 .n-topology.n-topology-yellow {
   position: relative;
   overflow: hidden;
-  background: #000;
+  background: var(--BG-100);
   -webkit-transition: background 0.6s;
   transition: background 0.6s;
   -o-user-select: none;
@@ -2978,13 +3011,13 @@
   pointer-events: all;
 }
 .n-topology.n-topology-yellow defs .bg {
-  fill: #ffc200;
+  fill: var(--accent-100);
 }
 .n-topology.n-topology-yellow defs .stroke {
-  stroke: #ffc200;
+  stroke: var(--accent-100);
 }
-.n-topology.n-topology-yellow defs [fill*="#FFFFFF"] {
-  fill: #000;
+.n-topology.n-topology-yellow defs [fill*="var(--TEXT-100)"] {
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-yellow .n-svg {
   border: none;
@@ -2996,7 +3029,7 @@
 }
 .n-topology.n-topology-yellow .fontIcon {
   font-family: next-font;
-  fill: #ffc200;
+  fill: var(--accent-100);
   alignment-baseline: central;
   text-anchor: middle;
   speak: none;
@@ -3016,10 +3049,10 @@
   cursor: pointer;
 }
 .n-topology.n-topology-yellow .iconBG {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-yellow .iconBGActive {
-  fill: #ffc200;
+  fill: var(--accent-100);
 }
 .n-topology.n-topology-yellow .node:not(.node-selected) .selectedBG {
   display: none;
@@ -3027,16 +3060,16 @@
 .n-topology.n-topology-yellow .node .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #ff7900;
+  stroke: var(--accent-200);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .node .dot {
-  fill: #ffc200;
+  fill: var(--accent-100);
 }
 .n-topology.n-topology-yellow .node text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #ffc200;
+  fill: var(--accent-100);
   pointer-events: none;
   -o-user-select: none;
   -webkit-user-select: none;
@@ -3046,50 +3079,50 @@
   font-size: 11px;
 }
 .n-topology.n-topology-yellow .node.disable .node-label {
-  fill: #ccc !important;
+  fill: var(--text-200) !important;
 }
 .n-topology.n-topology-yellow .node.disable .iconBG.iconBGActive,
 .n-topology.n-topology-yellow .node.disable .showIcon .iconShape {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-yellow .link line,
 .n-topology.n-topology-yellow .link path {
-  stroke: #997b19;
+  stroke: var(--bg-300);
   stroke-width: 1px;
   fill: none;
   cursor: pointer;
 }
 .n-topology.n-topology-yellow .link line.link:hover,
 .n-topology.n-topology-yellow .link path.link:hover {
-  stroke: #55440e;
+  stroke: var(--bg-200);
 }
 .n-topology.n-topology-yellow .link line.link_bg:hover ~ line {
-  stroke: #55440e !important;
+  stroke: var(--bg-200) !important;
 }
 .n-topology.n-topology-yellow .link .link-label {
   font-family: "Cisco Sans Reg";
-  fill: #ffc200;
+  fill: var(--accent-100);
   font-size: 12px;
 }
 .n-topology.n-topology-yellow .link .source-abel,
 .n-topology.n-topology-yellow .link .target-label {
   font-family: "Cisco Sans Reg";
-  fill: #ffc200;
+  fill: var(--accent-100);
   opacity: 0.8;
   font-size: 12px;
 }
 .n-topology.n-topology-yellow .link .disable-label {
-  fill: #fff;
+  fill: var(--text-100);
 }
 .n-topology.n-topology-yellow .link .disable-bg {
-  fill: #ccc;
+  fill: var(--text-200);
 }
 .n-topology.n-topology-yellow .link .link_bg {
   stroke: transparent;
 }
 .n-topology.n-topology-yellow .link.disable line,
 .n-topology.n-topology-yellow .link.disable path {
-  stroke: #ccc !important;
+  stroke: var(--text-200) !important;
   stroke-width: 1px;
 }
 .n-topology.n-topology-yellow .link.disable .link_bg {
@@ -3097,31 +3130,31 @@
 }
 .n-topology.n-topology-yellow .link.link-selected line,
 .n-topology.n-topology-yellow .link.link-selected path {
-  stroke: #ccc;
+  stroke: var(--text-200);
   stroke-width: 2px;
 }
 .n-topology.n-topology-yellow .nodeset .selectedBG {
   fill: transparent;
   opacity: 0.8;
-  stroke: #ff7900;
+  stroke: var(--accent-200);
   stroke-width: 3;
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .nodeset .dot {
-  fill: #000;
-  stroke: #ffc200;
+  fill: var(--BG-100);
+  stroke: var(--accent-100);
   stroke-width: 1;
 }
 .n-topology.n-topology-yellow .nodeset .icon {
   cursor: pointer;
 }
 .n-topology.n-topology-yellow .nodeset .bg {
-  fill: #ffc200;
+  fill: var(--accent-100);
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .nodeset text.node-label {
   font-family: "Cisco Sans Reg";
-  fill: #ffc200;
+  fill: var(--accent-100);
   -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3131,23 +3164,23 @@
 }
 .n-topology.n-topology-yellow .nodeset.disable {
   opacity: 0.3;
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-yellow .nodeset .iconBG,
 .n-topology.n-topology-yellow .nodeset .iconBGActive {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-yellow .nodeset .iconBGActive ~ .iconShape {
   display: block !important;
 }
 .n-topology.n-topology-yellow .nodeset .indicator .iconBG {
-  fill: #000;
+  fill: var(--BG-100);
 }
 .n-topology.n-topology-yellow .nodeset .indicator .iconBG:hover {
-  fill: #ffc200;
+  fill: var(--accent-100);
 }
 .n-topology.n-topology-yellow .nodeset .indicator .iconShape {
-  fill: #cc9b00;
+  fill: var(--primary-100);
 }
 .n-topology.n-topology-yellow .group .bg {
   opacity: 0.6;
@@ -3191,29 +3224,29 @@
   opacity: 0.5;
 }
 .n-topology.n-topology-yellow .link-set-bg {
-  stroke: #997b19;
+  stroke: var(--bg-300);
   stroke-width: 2px;
 }
 .n-topology.n-topology-yellow .link-set-circle {
-  fill: #ffc200;
-  stroke: #ffc200;
+  fill: var(--accent-100);
+  stroke: var(--accent-100);
   stroke-width: 16px;
   stroke-linejoin: round;
 }
 .n-topology.n-topology-yellow .link-set-text {
   font-family: "Cisco Sans Reg";
-  fill: #000;
+  fill: var(--BG-100);
   text-anchor: middle;
   dominant-baseline: central;
   font-size: 12px;
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .link-set.disable .link-set-bg {
-  stroke: #ccc;
+  stroke: var(--text-200);
 }
 .n-topology.n-topology-yellow .link-set.disable .link-set-circle {
-  fill: #ccc;
-  stroke: #ccc;
+  fill: var(--text-200);
+  stroke: var(--text-200);
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .n-topology.n-topology-yellow .link-set-circle,
@@ -3222,21 +3255,21 @@
   }
 }
 .n-topology.n-topology-yellow .mapPath {
-  fill: #333;
-  stroke: #555;
+  fill: var(--BG-200);
+  stroke: var(--BG-300);
   stroke-width: 1;
   opacity: 0.5;
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .mapBoundary {
   fill: none;
-  stroke: #555;
+  stroke: var(--BG-300);
   stroke-width: 1;
   pointer-events: none;
 }
 .n-topology.n-topology-yellow .selectionRect {
-  stroke: #ffc200;
-  fill: #ffc200;
+  stroke: var(--accent-100);
+  fill: var(--accent-100);
   fill-opacity: 0.1;
   pointer-events: none;
 }
@@ -3244,13 +3277,13 @@
   max-width: none !important;
 }
 .n-topology.n-topology-yellow .aggregationGroup .aggregationText {
-  fill: #ffc200;
+  fill: var(--accent-100);
   font-size: 12px;
 }
 .n-topology.n-topology-yellow .aggregationGroup .aggregationRect {
-  fill: #ffc200;
+  fill: var(--accent-100);
   opacity: 0.2;
-  stroke: #ffc200;
+  stroke: var(--accent-100);
   stroke-width: 3;
   stroke-linejoin: round;
   pointer-events: none;
@@ -3321,28 +3354,28 @@
   cursor: pointer;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
-  background: #333;
+  background: var(--BG-200);
   margin-top: -2px;
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode li:hover span {
-  color: #ffc200;
+  color: var(--accent-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode span {
-  color: #666;
+  color: var(--PRIMARY-100);
   display: inline-block;
   font-size: 18px;
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode-selected {
-  background: #ffc200 !important;
+  background: var(--accent-100) !important;
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode-selected span {
-  color: #000;
+  color: var(--BG-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode-selected:hover {
-  background: #ffc200 !important;
+  background: var(--accent-100) !important;
 }
 .n-topology.n-topology-yellow .n-topology-nav-mode-selected:hover span {
-  color: #000 !important;
+  color: var(--BG-100) !important;
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom {
   position: relative;
@@ -3354,8 +3387,8 @@
   position: absolute;
   text-align: center;
   font-size: 25px;
-  color: #666;
-  background: #333;
+  color: var(--PRIMARY-100);
+  background: var(--BG-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-in {
   top: 0;
@@ -3363,8 +3396,8 @@
   cursor: pointer;
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-in:hover {
-  color: #b3b3b3;
-  background: #4d4d4d;
+  color: var(--text-200);
+  background: var(--bg-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-out {
   top: 25px;
@@ -3372,29 +3405,29 @@
   cursor: pointer;
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-out:hover {
-  color: #b3b3b3;
-  background: #4d4d4d;
+  color: var(--text-200);
+  background: var(--bg-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-selection {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-selection:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-zoom-selection-selected {
-  color: #ffda66;
+  color: var(--accent-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-fit {
   cursor: pointer;
   text-align: center;
   font-size: 22px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-fit:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-agr {
   cursor: pointer;
@@ -3402,11 +3435,11 @@
   text-align: center;
   font-size: 20px;
   height: 24px;
-  color: #666;
+  color: var(--PRIMARY-100);
   display: none;
 }
 .n-topology.n-topology-yellow .n-topology-nav-agr:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 @-webkit-keyframes agr-icon-ani {
   0% {
@@ -3423,11 +3456,11 @@
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
   -webkit-transition: 0 none;
-  color: #ffc81a;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav .agr-text {
   font-size: 10px;
-  color: #333;
+  color: var(--BG-200);
   position: absolute;
   left: 10px;
   margin-top: -1px;
@@ -3437,28 +3470,28 @@
   cursor: pointer;
   text-align: center;
   font-size: 18px;
-  color: #666;
+  color: var(--PRIMARY-100);
 }
 .n-topology.n-topology-yellow .n-topology-nav-full:hover {
-  color: #b3b3b3;
+  color: var(--text-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-setting {
   cursor: pointer;
   text-align: center;
-  color: #666;
+  color: var(--PRIMARY-100);
   line-height: 1;
   -webkit-transition: none 0 !important;
   transition: none 0 !important;
 }
 .n-topology.n-topology-yellow .n-topology-nav-setting:hover {
   opacity: 1;
-  color: #ffc81a;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-yellow .n-topology-nav-setting-icon {
   font-size: 20px;
 }
 .n-topology.n-topology-yellow .n-topology-nav-setting-icon-selected {
-  color: #ffc81a;
+  color: var(--primary-200);
 }
 .n-topology.n-topology-yellow .n-topology-loading {
   overflow: hidden;
@@ -3498,7 +3531,7 @@
   list-style: none;
 }
 .n-topology.n-topology-yellow .n-topology-loading li:after {
-  background: #ffc200;
+  background: var(--accent-100);
 }
 .n-topology.n-topology-yellow .n-topology-loading li:nth-child(1) {
   -webkit-transform: rotate(0deg);
@@ -3609,7 +3642,7 @@
   min-width: 160px;
   line-height: 24px;
   position: relative;
-  border-bottom: dotted 1px #ccc;
+  border-bottom: dotted 1px var(--text-200);
 }
 .n-topology-tooltip-header-actions {
   float: right;
@@ -3619,7 +3652,7 @@
 }
 .n-topology-tooltip-header-text {
   line-height: 24px;
-  color: #333;
+  color: var(--BG-200);
   font-size: 14px;
   font-weight: 700;
 }
@@ -3686,12 +3719,12 @@
 }
 .n-topology-thumbnail {
   position: absolute;
-  border: solid 1px #ccc;
-  box-shadow: 0 0 10px #ccc;
+  border: solid 1px var(--text-200);
+  box-shadow: 0 0 10px var(--text-200);
   margin-top: -10px;
   margin-left: -10px;
   z-index: 100;
-  background: #fff;
+  background: var(--text-100);
 }
 .n-topology-thumbnail-container {
   position: relative;
@@ -3701,8 +3734,8 @@
   border: solid 1px red;
 }
 .n-topology-thumbnail-svg {
-  border: solid 1px #c4c4c4;
-  background: #fff;
+  border: solid 1px var(--text-200);
+  background: var(--text-100);
 }
 .n-topology-thumbnail .handler {
   position: absolute;
@@ -3832,13 +3865,13 @@
   user-select: none;
 }
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted var(--BG-200);
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .btn:focus,
 .btn:hover {
-  color: #333;
+  color: var(--BG-200);
   text-decoration: none;
 }
 .btn.active,
@@ -3859,18 +3892,18 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: var(--BG-200);
+  background-color: var(--text-100);
+  border-color: var(--text-200);
 }
 .btn-default.active,
 .btn-default:active,
 .btn-default:focus,
 .btn-default:hover,
 .open .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #ebebeb;
-  border-color: #adadad;
+  color: var(--BG-200);
+  background-color: var(--bg-300);
+  border-color: var(--text-200);
 }
 .btn-default.active,
 .btn-default:active,
@@ -3892,22 +3925,22 @@ fieldset[disabled] .btn-default.active,
 fieldset[disabled] .btn-default:active,
 fieldset[disabled] .btn-default:focus,
 fieldset[disabled] .btn-default:hover {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: var(--text-100);
+  border-color: var(--text-200);
 }
 .btn-primary {
-  color: #fff;
-  background-color: #0386d2;
-  border-color: #0376b9;
+  color: var(--text-100);
+  background-color: var(--primary-100);
+  border-color: var(--primary-200);
 }
 .btn-primary.active,
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover,
 .open .dropdown-toggle.btn-primary {
-  color: #fff;
-  background-color: #026caa;
-  border-color: #024f7d;
+  color: var(--text-100);
+  background-color: var(--primary-100);
+  border-color: var(--bg-100);
 }
 .btn-primary.active,
 .btn-primary:active,
@@ -3929,22 +3962,22 @@ fieldset[disabled] .btn-primary.active,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
-  background-color: #0386d2;
-  border-color: #0376b9;
+  background-color: var(--primary-100);
+  border-color: var(--primary-200);
 }
 .btn-warning {
-  color: #fff;
-  background-color: #f2ad4e;
-  border-color: #f0a236;
+  color: var(--text-100);
+  background-color: var(--accent-100);
+  border-color: var(--accent-100);
 }
 .btn-warning.active,
 .btn-warning:active,
 .btn-warning:focus,
 .btn-warning:hover,
 .open .dropdown-toggle.btn-warning {
-  color: #fff;
-  background-color: #ef9b28;
-  border-color: #d98510;
+  color: var(--text-100);
+  background-color: var(--accent-200);
+  border-color: var(--primary-200);
 }
 .btn-warning.active,
 .btn-warning:active,
@@ -3966,22 +3999,22 @@ fieldset[disabled] .btn-warning.active,
 fieldset[disabled] .btn-warning:active,
 fieldset[disabled] .btn-warning:focus,
 fieldset[disabled] .btn-warning:hover {
-  background-color: #f2ad4e;
-  border-color: #f0a236;
+  background-color: var(--accent-100);
+  border-color: var(--accent-100);
 }
 .btn-danger {
-  color: #fff;
-  background-color: #da534f;
-  border-color: #d63e3a;
+  color: var(--text-100);
+  background-color: var(--primary-300);
+  border-color: var(--primary-200);
 }
 .btn-danger.active,
 .btn-danger:active,
 .btn-danger:focus,
 .btn-danger:hover,
 .open .dropdown-toggle.btn-danger {
-  color: #fff;
-  background-color: #d3322d;
-  border-color: #ae2825;
+  color: var(--text-100);
+  background-color: var(--primary-100);
+  border-color: var(--bg-200);
 }
 .btn-danger.active,
 .btn-danger:active,
@@ -4003,22 +4036,22 @@ fieldset[disabled] .btn-danger.active,
 fieldset[disabled] .btn-danger:active,
 fieldset[disabled] .btn-danger:focus,
 fieldset[disabled] .btn-danger:hover {
-  background-color: #da534f;
-  border-color: #d63e3a;
+  background-color: var(--primary-300);
+  border-color: var(--primary-200);
 }
 .btn-success {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  color: var(--text-100);
+  background-color: var(--accent-200);
+  border-color: var(--primary-200);
 }
 .btn-success.active,
 .btn-success:active,
 .btn-success:focus,
 .btn-success:hover,
 .open .dropdown-toggle.btn-success {
-  color: #fff;
-  background-color: #47a447;
-  border-color: #398439;
+  color: var(--text-100);
+  background-color: var(--primary-100);
+  border-color: var(--PRIMARY-300);
 }
 .btn-success.active,
 .btn-success:active,
@@ -4040,22 +4073,22 @@ fieldset[disabled] .btn-success.active,
 fieldset[disabled] .btn-success:active,
 fieldset[disabled] .btn-success:focus,
 fieldset[disabled] .btn-success:hover {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: var(--accent-200);
+  border-color: var(--primary-200);
 }
 .btn-info {
-  color: #fff;
-  background-color: #5bc1df;
-  border-color: #46b9db;
+  color: var(--text-100);
+  background-color: var(--accent-100);
+  border-color: var(--accent-200);
 }
 .btn-info.active,
 .btn-info:active,
 .btn-info:focus,
 .btn-info:hover,
 .open .dropdown-toggle.btn-info {
-  color: #fff;
-  background-color: #39b4d8;
-  border-color: #259bbe;
+  color: var(--text-100);
+  background-color: var(--accent-200);
+  border-color: var(--primary-200);
 }
 .btn-info.active,
 .btn-info:active,
@@ -4077,11 +4110,11 @@ fieldset[disabled] .btn-info.active,
 fieldset[disabled] .btn-info:active,
 fieldset[disabled] .btn-info:focus,
 fieldset[disabled] .btn-info:hover {
-  background-color: #5bc1df;
-  border-color: #46b9db;
+  background-color: var(--accent-100);
+  border-color: var(--accent-200);
 }
 .btn-link {
-  color: #0386d2;
+  color: var(--primary-100);
   font-weight: 400;
   cursor: pointer;
   border-radius: 0;
@@ -4102,7 +4135,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:focus,
 .btn-link:hover {
-  color: #025687;
+  color: var(--PRIMARY-100);
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4110,7 +4143,7 @@ fieldset[disabled] .btn-link {
 .btn-link[disabled]:hover,
 fieldset[disabled] .btn-link:focus,
 fieldset[disabled] .btn-link:hover {
-  color: #999;
+  color: var(--PRIMARY-200);
   text-decoration: none;
 }
 .btn-lg {
@@ -4144,24 +4177,24 @@ input[type="submit"].btn-block {
   width: 100%;
 }
 .btn-default .caret {
-  border-top-color: #333;
+  border-top-color: var(--BG-200);
 }
 .btn-danger .caret,
 .btn-info .caret,
 .btn-primary .caret,
 .btn-success .caret,
 .btn-warning .caret {
-  border-top-color: #fff;
+  border-top-color: var(--text-100);
 }
 .dropup .btn-default .caret {
-  border-bottom-color: #333;
+  border-bottom-color: var(--BG-200);
 }
 .dropup .btn-danger .caret,
 .dropup .btn-info .caret,
 .dropup .btn-primary .caret,
 .dropup .btn-success .caret,
 .dropup .btn-warning .caret {
-  border-bottom-color: #fff;
+  border-bottom-color: var(--text-100);
 }
 .btn-group,
 .btn-group-vertical {
@@ -4363,9 +4396,9 @@ input[type="submit"].btn-block {
   max-width: 276px;
   padding: 1px;
   text-align: left;
-  background-color: #fff;
+  background-color: var(--text-100);
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid var(--text-200);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -4390,8 +4423,8 @@ input[type="submit"].btn-block {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
+  background-color: var(--bg-300);
+  border-bottom: 1px solid var(--bg-300);
   border-radius: 5px 5px 0 0;
 }
 .popover-content {
@@ -4417,7 +4450,7 @@ input[type="submit"].btn-block {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999;
+  border-top-color: var(--PRIMARY-200);
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
 }
@@ -4426,14 +4459,14 @@ input[type="submit"].btn-block {
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
-  border-top-color: #fff;
+  border-top-color: var(--text-100);
 }
 .popover.right .arrow {
   top: 50%;
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
-  border-right-color: #999;
+  border-right-color: var(--PRIMARY-200);
   border-right-color: rgba(0, 0, 0, 0.25);
 }
 .popover.right .arrow:after {
@@ -4441,13 +4474,13 @@ input[type="submit"].btn-block {
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
-  border-right-color: #fff;
+  border-right-color: var(--text-100);
 }
 .popover.bottom .arrow {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999;
+  border-bottom-color: var(--PRIMARY-200);
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
 }
@@ -4456,20 +4489,20 @@ input[type="submit"].btn-block {
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
-  border-bottom-color: #fff;
+  border-bottom-color: var(--text-100);
 }
 .popover.left .arrow {
   top: 50%;
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
-  border-left-color: #999;
+  border-left-color: var(--PRIMARY-200);
   border-left-color: rgba(0, 0, 0, 0.25);
 }
 .popover.left .arrow:after {
   content: " ";
   right: 1px;
   border-right-width: 0;
-  border-left-color: #fff;
+  border-left-color: var(--text-100);
   bottom: -10px;
 }
