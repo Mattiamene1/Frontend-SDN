@@ -50,6 +50,8 @@
   #app.container {
     max-width: 100%!important;
     position: center !important;
+    position: relative !important;
+    transform: translate(-50%, -50%)!;
     position: 10px!important ;
     width: 100% !important; ;
     min-height:128px !important ;
@@ -58,6 +60,7 @@
   }
 
   .button-row{
+    justify-content: space-between!important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
@@ -72,14 +75,20 @@
   }
 
   .btn-primary{
+    flex: 2 !important;
     min-width: 380px !important;
     background-color:var(--primary-100)!important;
     border-color:var(--accent-100)!important;
   }
   
   .btn-secondary{
+    flex: 1 !important;
     background-color: var(--primary-200)!important;
     border-color:var(--accent-200)!important;
+    }
+    
+    .space{
+    flex: 1;
     }
 
   .container1 {
@@ -132,6 +141,8 @@
     max-width:60% !important;
     max-height: 200px !important ;
     position: center !important;
+    position: relative !important;
+    transform: translate(-50%, -50%)!important;
     position: 10px!important;
     margin:15px !important;
     overflow: hidden !important;
