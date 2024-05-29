@@ -15,84 +15,89 @@
  * {
     box-sizing: border-box;
     padding: 1px;
-    margin: 1%;
+    margin: 1%  ;
   }
   
   .body {
-    width: 2160px !important ;
-    height: 1218px !important ;
-    padding: 10px;
+    width: 1080px !important ;
+    height: 720px !important ;
+    padding: 10px!important;
     background-color: var(--bg-200)!important;
     color: var(--primary-100) !important;
-    transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out!important;
   }
   
   html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif!important;
+    font-size: 18px!important;
     color: var(--text-200)!important;
-    height: 100%;
-    margin: 1;
-    padding: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%!important;
+    margin: 1!important;
+    padding: 1!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
   }
 
   #app.container {
-    position: 10px ;
+    position: 10px!important ;
     width: 100% !important; ;
     height:20% !important ;
   }
 
+  .button-row{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center!important;
+    gap: 10px!important;
+    margin-top: 10px!important;
+  }
+  .button{
+    min-height:3% !important;
+    min-width: 15%!important ;
+  }
   .container1 {
     background-color: var(--primary-300)!important;
-    width: 100%;
-    min-height: 100vh;
-    padding: 10px;
-    color: var(--text-200);
-    transition: all 0.4s ease-out;
-  }
-  
-  .language-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3vh;
+    width: 100%!important;
+    min-height: 100vh!important;
+    padding: 10px!important;
+    color: var(--text-200)!important;
+    transition: all 0.4s ease-out!important;
   }
   
   .container2 {
-    margin: 2%;
+    margin: 2%!important;
     background-color: var(--accent-100)!important;
-    border-radius: 10px;
+    border-radius: 10px!important;
     border-color: var(--primary-100)!important;
-    align-self: center;
-    justify-content: space-between;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+    align-self: center!important;
+    justify-content: space-between!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    gap: 2%!important;
+    flex-wrap: wrap!important;
+    margin-top: 1rem!important;
   }
   
   .container2 button {
-    flex: 1;
-    max-width: 40%;
+    flex: 1!important;
+    max-width: 40%!important;
   }
   
   .btn-secondary,
   .btn-primary {
-    margin: 1%;
-    position: relative;
-    justify-content: space-between;
+    margin: 1%!important;
+    position: relative!important;
+    justify-content: space-between!important;
   }
   
   .container,
   .container1,
   .container2 {
-    margin: 2px;
-    overflow: auto;
+    margin: 2px!important;
+    overflow: auto!important;
   }
   
   .container,

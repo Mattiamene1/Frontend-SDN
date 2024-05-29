@@ -26,11 +26,17 @@
 
 <body>
     <div id="app" class="container">
-        <button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonText }}</button>
-        <button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonText }}</button>
-        &emsp;
-        <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
-        <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
+        <div class="button-row">
+            
+            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonText }}</button>
+
+            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonText }}</button>&emsp;
+
+            <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
+
+            <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
+
+        </div>
         <div class="row">
             <div class="mt-2 col" v-if="switch_detail">
                 <a class="btn btn-danger" href="#" @click="hide_switch()">{{ closeSwitchDetailsButton }}</a>
