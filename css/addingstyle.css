@@ -13,7 +13,6 @@
   }
 
  * {
-    box-sizing:content-box!important;
     padding: 1px!important;
     margin: 5px !important ;
   }
@@ -38,7 +37,6 @@
     font-size: 18px!important;
     color: var(--text-200)!important;
     height: 100%!important;
-    
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
@@ -66,6 +64,11 @@
   .btn{
     min-height:250px !important;
     min-width: 100px !important ;
+    color: var(--primary-200)!important;
+    
+  }
+  .btn-primary{
+    color:var(--primary-100)!important;
   }
 
   .container1 {
