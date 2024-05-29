@@ -19,6 +19,8 @@
   }
   
   .body {
+    justify-content: center !important;
+    align-items: center!important;
     margin-top: 1% !important;
     margin-bottom: 0px !important;
     margin-left: 0px !important;
@@ -44,6 +46,8 @@
   }
 
   #app.container {
+    max-width:60% !important;
+    max-height: 480px !important ;
     position: center !important;
     position: 10px!important ;
     width: 100% !important; ;
@@ -61,7 +65,7 @@
   }
 
   .btn{
-    min-height:100px !important;
+    min-height:250px !important;
     min-width: 100px !important ;
   }
 
