@@ -12,20 +12,25 @@
       
   }
 
- * {    
+ * {  
     padding: 1px!important;
     margin: 5px !important ;
   }
   
   .body {
+    background-attachment: scroll !important;
+    background-clip:border-box !important;  
+    background-origin: padding-box !important;
+    background-size: auto !important;
+    background-repeat: repeat!important;
     justify-content: center !important;
     align-items: center!important;
-    margin-top: 1% !important;
+    margin-top: 0px !important;
     margin-bottom: 0px !important;
     margin-left: 0px !important;
     margin-right: 0px!important;
-    max-width: 1080px !important ;
-    max-height: 480px !important ;
+    max-width: 100% !important ;
+    max-height: 98% !important ;
     padding: 1px!important;
     background-color: var(--bg-200)!important;
     color: var(--primary-100) !important;
