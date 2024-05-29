@@ -54,6 +54,7 @@
     width: 100% !important; ;
     min-height:128px !important ;
     margin:10px !important;
+    overflow:hidden !important;
   }
 
   .button-row{
@@ -106,6 +107,8 @@
   }
   
   .container2 button {
+    min-height:250px !important;
+    min-width: 100px !important; 
     flex: 1!important;
     max-width: 40%!important;
   }
@@ -122,18 +125,14 @@
   .container2 {
     margin: 2px!important;
     overflow: auto!important;
-  }
-  
-  .container,
-  .container1,
-  .container2 {
     border: 0.5px solid var(--primary-200)!important;
   }
-  
+    
   #app.n-topology-blue{
     max-width:60% !important;
     max-height: 200px !important ;
     position: center !important;
     position: 10px!important;
     margin:15px !important;
+    overflow: hidden !important;
   }
