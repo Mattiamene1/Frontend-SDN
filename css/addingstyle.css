@@ -1,14 +1,14 @@
 :root {
-  --primary-100: #FF7F50;
-  --primary-200: #dd6236;
-  --primary-300: #8f1e00;
-  --accent-100: #8B4513;
-  --accent-200: #ffd299;
-  --text-100: #000000;
-  --text-200: #2c2c2c;
-  --bg-100: #F7EEDD;
-  --bg-200: #ede4d3;
-  --bg-300: #c4bcab;
+  --primary-100:#FF7F50;
+  --primary-200:#dd6236;
+  --primary-300:#8f1e00;
+  --accent-100:#8B4513;
+  --accent-200:#ffd299;
+  --text-100:#000000;
+  --text-200:#2c2c2c;
+  --bg-100:#F7EEDD;
+  --bg-200:#ede4d3;
+  --bg-300:#c4bcab;
 }
 
 * {
@@ -19,7 +19,6 @@
 }
 
 .body {
-  margin: 1%;
   width: 100%;
   min-height: 100vh;
   padding: 10px;

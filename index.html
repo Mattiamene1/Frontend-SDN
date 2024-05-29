@@ -18,99 +18,107 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="megacontainer">
-    <div id="app" class="container">
-        <button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonText }}</button>
-        <button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonText }}</button>
-        &emsp;
-        <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
-        <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
-        <div class="row">
-            <div class="mt-2 col" v-if="switch_detail">
-                <a class="btn btn-danger" href="#" @click="hide_switch()">{{ closeSwitchDetailsButton }}</a>
-                <h2>{{ switchDetailsTitle }}</h2>
-                <p>DPID: {{switch_.dpid}}</p>
-                <h2>{{ switchPortsTitle }}</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <th>{{ portNumber }}</th>
-                        <th>{{ name }}</th>
-                        <th>{{ macAddress }}</th>
-                    </thead>
-                    <tbody>
-                        <tr v-for="port in switch_.ports">
-                            <td>{{ port.port_no }}</td>
-                            <td>{{ port.name }}</td>
-                            <td>{{ port.hw_addr }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2 class="mt-2">{{ flowTableTitle }}</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <tr>
-                            <th>{{ tableID }}</th>
-                            <th>{{ priority }}</th>
-                            <th>{{ actions }}</th>
-                            <th>{{ match }}</th>
-                            <th>
-                                {{ timeout }}<br />
-                                <span class="badge text-bg-primary">{{ idle }}</span>&nbsp;
-                                <span class="badge text-bg-success">{{ hard }}</span>
-                            </th>
-                            <th>{{ duration }}</th>
-                            <th>{{ packetCount }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="flow in flow_table">
-                            <td>{{ flow.table_id }}</td>
-                            <td>{{ flow.priority }}</td>
-                            <td>{{ flow.actions.join(', ') }}</td>
-                            <td>
-                                <span v-for="(rule, key) in flow.match">
-                                    <b>{{key}}</b>: {{rule}} |
-                                </span>
-                            </td>
-                            <td>
-                                <span class="badge text-bg-primary">{{ flow.idle_timeout }}</span>&nbsp;
-                                <span class="badge text-bg-success">{{ flow.hard_timeout }}</span>
-                            </td>
-                            <td>{{ flow.duration_sec }}</td>
-                            <td>{{ flow.packet_count }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="mt-2 col" v-if="host_detail">
-                <a class="btn btn-danger" href="#" @click="hide_host()">{{ closeHostDetailsButton }}</a>
-                <h2>{{ hostDetailsTitle }}</h2>
-                <p>
-                    MAC: {{host.mac}}<br>
-                    <template v-if="host.ipv4.length">IPv4: {{host.ipv4.join(', ')}}<br></template>
-                    <template v-if="host.ipv6.length">IPv6: {{host.ipv6.join(', ')}}</template>
-                </p>
-                <h2>{{ connectedHostPortTitle }}</h2>
-                <table class="mt-2 table table-bordered table-sm">
-                    <thead>
-                        <th>{{ portNumber }}</th>
-                        <th>{{ name }}</th>
-                        <th>{{ macAddress }}</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ host.port.port_no }}</td>
-                            <td>{{ host.port.name }}</td>
-                            <td>{{ host.port.hw_addr }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div id="topology-container"></div>
-    </div>
-
-    <script src="js/topology.js"></script>
-    <script src="js/app.js"></script>
+<body>
+    <table>
+        <tr>
+            <td id="app" class="container">
+                <ul>
+                    <li><button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonText }}</button></li>
+                    <li><button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonText }}</button>
+                    &emsp;</li>
+                    <li><button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;</li>
+                    <li><button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;</li>
+                </ul>
+            </td>
+        <tr>
+            <td class="row">
+                <div class="mt-2 col" v-if="switch_detail">
+                    <a class="btn btn-danger" href="#" @click="hide_switch()">{{ closeSwitchDetailsButton }}</a>
+                    <h2>{{ switchDetailsTitle }}</h2>
+                    <p>DPID: {{switch_.dpid}}</p>
+                    <h2>{{ switchPortsTitle }}</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <th>{{ portNumber }}</th>
+                            <th>{{ name }}</th>
+                            <th>{{ macAddress }}</th>
+                        </thead>
+                        <tbody>
+                            <tr v-for="port in switch_.ports">
+                                <td>{{ port.port_no }}</td>
+                                <td>{{ port.name }}</td>
+                                <td>{{ port.hw_addr }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="mt-2">{{ flowTableTitle }}</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>{{ tableID }}</th>
+                                <th>{{ priority }}</th>
+                                <th>{{ actions }}</th>
+                                <th>{{ match }}</th>
+                                <th>
+                                    {{ timeout }}<br />
+                                    <span class="badge text-bg-primary">{{ idle }}</span>&nbsp;
+                                    <span class="badge text-bg-success">{{ hard }}</span>
+                                </th>
+                                <th>{{ duration }}</th>
+                                <th>{{ packetCount }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="flow in flow_table">
+                                <td>{{ flow.table_id }}</td>
+                                <td>{{ flow.priority }}</td>
+                                <td>{{ flow.actions.join(', ') }}</td>
+                                <td>
+                                    <span v-for="(rule, key) in flow.match">
+                                        <b>{{key}}</b>: {{rule}} |
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge text-bg-primary">{{ flow.idle_timeout }}</span>&nbsp;
+                                    <span class="badge text-bg-success">{{ flow.hard_timeout }}</span>
+                                </td>
+                                <td>{{ flow.duration_sec }}</td>
+                                <td>{{ flow.packet_count }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-2 col" v-if="host_detail">
+                    <a class="btn btn-danger" href="#" @click="hide_host()">{{ closeHostDetailsButton }}</a>
+                    <h2>{{ hostDetailsTitle }}</h2>
+                    <p>
+                        MAC: {{host.mac}}<br>
+                        <template v-if="host.ipv4.length">IPv4: {{host.ipv4.join(', ')}}<br></template>
+                        <template v-if="host.ipv6.length">IPv6: {{host.ipv6.join(', ')}}</template>
+                    </p>
+                    <h2>{{ connectedHostPortTitle }}</h2>
+                    <table class="mt-2 table table-bordered table-sm">
+                        <thead>
+                            <th>{{ portNumber }}</th>
+                            <th>{{ name }}</th>
+                            <th>{{ macAddress }}</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ host.port.port_no }}</td>
+                                <td>{{ host.port.name }}</td>
+                                <td>{{ host.port.hw_addr }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="topology-container"></td>
+            <script src="js/topology.js"></script>
+            <script src="js/app.js"></script>
+        </tr>
+    </table>    
 </body>
 </html>
