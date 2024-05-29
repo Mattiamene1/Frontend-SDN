@@ -86,8 +86,6 @@ html {
 .container,
 .container1,
 .container2 {
-  margin-top: 2% ;
-  margin: 1%;
   overflow: auto;
 }
 
