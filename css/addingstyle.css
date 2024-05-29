@@ -38,7 +38,11 @@
     justify-content: center;
     align-items: center;
   }
-  
+  #app.container {
+    width: 100% !important; ;
+    height:20% !important ;
+  }
+
   .container1 {
     background-color: var(--primary-300)!important;
     width: 100%;
