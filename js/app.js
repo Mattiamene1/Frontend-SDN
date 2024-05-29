@@ -188,7 +188,7 @@ createApp({
       }
     },
     loadTranslation: function (lang) {
-      fetch("../translation.json")
+      fetch("../json/translation.json")
         .then((response) => response.json())
         .then((data) => {
           const texts = data[lang].text;
