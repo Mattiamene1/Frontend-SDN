@@ -15,9 +15,11 @@
   box-sizing: border-box;
   padding: 1px;
   margin: 1%;
+  background-color: var(--bg-200) !important
 }
 
 .body {
+  margin: 1%;
   width: 100%;
   min-height: 100vh;
   padding: 10px;
@@ -84,7 +86,8 @@ html {
 .container,
 .container1,
 .container2 {
-  margin: 2px;
+  margin-top: 2% ;
+  margin: 1%;
   overflow: auto;
 }
 
