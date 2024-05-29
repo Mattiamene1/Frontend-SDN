@@ -53,7 +53,7 @@
   }
 
   #app.container {
-    max-width: 100%!important;
+    max-width: 59vh !important;
     position: center !important;
     position: relative !important;
     transform: translate(-50%, -50%)!;
