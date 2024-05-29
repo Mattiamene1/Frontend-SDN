@@ -60,8 +60,9 @@
     position: 10px!important ;
     width: 100% !important; ;
     min-height:128px !important ;
+    max-width: 95vh !important;
     margin:10px !important;
-    overflow: 0 !important;
+    overflow:hidden !important;
     overflow-y:auto !important;
   }
 
