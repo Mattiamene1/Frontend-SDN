@@ -21,6 +21,8 @@
   .body {
     margin-top: 1% !important;
     margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px!important;
     width: 1080px !important ;
     height: 720px !important ;
     padding: 1px!important;
@@ -59,8 +61,8 @@
   }
 
   .btn{
-    min-height:5% !important;
-    min-width: 15%!important ;
+    min-height:100px !important;
+    min-width: 100px !important ;
   }
 
   .container1 {
@@ -113,8 +115,8 @@
   }
   
   #app.n-topology-blue{
-    width: 60% !important; ;
-    height:50% !important ;
+    max-width:60% !important;
+    max-height: 480px !important ;
     position: center !important;
     position: 10px!important;
     margin:15px !important;
