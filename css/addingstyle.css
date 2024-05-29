@@ -43,7 +43,7 @@
   }
 
   #app.container {
-    max-width:60% !important;
+    max-width: 100%!important;
     max-height: 480px !important ;
     position: center !important;
     position: 10px!important ;
@@ -63,13 +63,18 @@
 
   .btn{
     min-height:250px !important;
-    min-width: 100px !important ;
-    color: var(--primary-200)!important;
-    
+    min-width: 100px !important ; 
   }
+  
   .btn-primary{
-    color:var(--primary-100)!important;
+    background-color:var(--primary-100)!important;
+    border-color:var(--accent-100)!important;
   }
+  
+  .btn-secondary{
+    background-color: var(--primary-200)!important;
+    border-color:var(--accent-200)!important;
+    }
 
   .container1 {
     background-color: var(--primary-300)!important;
