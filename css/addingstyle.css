@@ -35,6 +35,7 @@
     background-color: var(--bg-200)!important;
     color: var(--primary-100) !important;
     transition: all 0.4s ease-out!important;
+    flex-direction: column !important;
   }
   
   html {
@@ -146,4 +147,5 @@
     position: 10px!important;
     margin:15px !important;
     overflow: hidden !important;
+    flex-direction: column !important;
   }
