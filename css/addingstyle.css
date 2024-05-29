@@ -13,9 +13,9 @@
   }
 
  * {
-    box-sizing: border-box !important;
+    box-sizing:content-box!important;
     padding: 1px!important;
-    margin: 1% !important ;
+    margin: 5px !important ;
   }
   
   .body {
@@ -25,8 +25,8 @@
     margin-bottom: 0px !important;
     margin-left: 0px !important;
     margin-right: 0px!important;
-    width: 1080px !important ;
-    height: 720px !important ;
+    max-width: 1080px !important ;
+    max-height: 720px !important ;
     padding: 1px!important;
     background-color: var(--bg-200)!important;
     color: var(--primary-100) !important;
@@ -38,8 +38,7 @@
     font-size: 18px!important;
     color: var(--text-200)!important;
     height: 100%!important;
-    margin: 1!important;
-    padding: 1!important;
+    
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
