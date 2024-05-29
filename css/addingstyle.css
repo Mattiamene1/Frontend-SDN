@@ -12,7 +12,7 @@
       
   }
 
- * {
+ * {    
     padding: 1px!important;
     margin: 5px !important ;
   }
@@ -44,7 +44,6 @@
 
   #app.container {
     max-width: 100%!important;
-    max-height: 480px !important ;
     position: center !important;
     position: 10px!important ;
     width: 100% !important; ;
@@ -128,7 +127,7 @@
   
   #app.n-topology-blue{
     max-width:60% !important;
-    max-height: 480px !important ;
+    max-height: 200px !important ;
     position: center !important;
     position: 10px!important;
     margin:15px !important;
