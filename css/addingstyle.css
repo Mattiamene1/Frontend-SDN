@@ -13,12 +13,13 @@
   }
 
  * {
-    box-sizing: border-box;
-    padding: 1px;
-    margin: 1%  ;
+    box-sizing: border-box !important;
+    padding: 1px!important;
+    margin: 1% !important ;
   }
   
   .body {
+    margin: 1% !important;
     width: 1080px !important ;
     height: 720px !important ;
     padding: 10px!important;
@@ -107,6 +108,6 @@
   }
   
   #app.n-topology-blue{
-    width: 100% !important; ;
-    height:70% !important ;
+    width: 60% !important; ;
+    height:50% !important ;
   }
