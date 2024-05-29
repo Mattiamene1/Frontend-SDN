@@ -59,8 +59,7 @@
     transform: translate(-50%, -50%)!;
     position: 10px!important ;
     width: 100% !important; ;
-    min-height:128px !important ;
-    max-width: 100vh !important;
+    min-height:128px !important;
     margin:10px !important;
     overflow:hidden !important;
     overflow-y:auto !important;
@@ -146,7 +145,7 @@
   }
     
   #app.n-topology-blue{
-    max-width:60%;
+    max-width: 60vh !important;
     max-height: 40vh !important;
     overflow-y:auto !important;
     position: center !important;
