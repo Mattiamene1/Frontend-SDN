@@ -41,9 +41,11 @@
   }
 
   #app.container {
+    position: center !important;
     position: 10px!important ;
     width: 100% !important; ;
     height:20% !important ;
+    margin:15px !important;
   }
 
   .button-row{
@@ -54,10 +56,12 @@
     gap: 10px!important;
     margin-top: 10px!important;
   }
+
   .button{
     min-height:3% !important;
     min-width: 15%!important ;
   }
+
   .container1 {
     background-color: var(--primary-300)!important;
     width: 100%!important;
