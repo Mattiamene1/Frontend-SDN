@@ -93,9 +93,3 @@ html {
 .container2 {
   border: 0.5px solid var(--primary-200) !important;
 }
-
-#app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
