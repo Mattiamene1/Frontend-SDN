@@ -143,6 +143,40 @@
     overflow: auto!important;
     border: 0.5px solid var(--primary-200)!important;
   }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    flex-direction: column;
+  }
+  
+  .slider-container label {
+    margin-bottom: 10px;
+  }
+  
+  .slider-container input[type="range"] {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* Chrome */
+    width: 8px;
+    height: 150px;
+  }
+  
+  .slider-container span {
+    margin-top: 10px;
+  }
+  
+  .language-flag {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+  }
+  .language-flag {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
     
   #app.n-topology-blue{
     max-width: 60vh !important;

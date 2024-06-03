@@ -6,7 +6,7 @@ createApp({
       topology: null,
       topologyConfig: {
         // configuration for nodes
-        //adaptive: true,
+        adaptive: true,
         width: window.innerWidth,
         height: window.innerHeight,
         nodeConfig: {
@@ -37,7 +37,8 @@ createApp({
 
       // Translation related data
       title: '',
-      autoUpdateButtonText: '',
+      autoUpdateButtonTextStart: '',
+      autoUpdateButtonTextStop: '',
       layoutVertical: '',
       layoutHorizontal: '',
       switchDetailsTitle: '',
@@ -59,7 +60,8 @@ createApp({
       hostDetailsTitle: '',
       closeHostDetailsButton: '',
       connectedHostPortTitle: '',
-      lang: 'it'
+      lang: '',
+      updateFrequencyLabel: '',
     }
   },
   watch: {
@@ -92,8 +94,14 @@ createApp({
           if (vm.host_detail) {
             vm.show_host(vm.host_id)
           }
-        }, 5 * 1000); // 5 seconds
+        },vm.updateFrequency);
         this.auto_update = true
+      }
+    },
+    updateFrequencyChanged: function () {
+      if (this.auto_update) {
+        this.change_auto_update();
+        this.change_auto_update();
       }
     },
     vertical_layout: function () {
@@ -193,7 +201,8 @@ createApp({
         .then((data) => {
           const texts = data[lang].text;
           this.title = texts.title;
-          this.autoUpdateButtonText = texts.autoUpdateButtonText;
+          this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
+          this.autoUpdateButtonTextStop = text.autoUpdateButtonTextStop;
           this.layoutVertical = texts.layoutVertical;
           this.layoutHorizontal = texts.layoutHorizontal;
           this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
@@ -216,12 +225,18 @@ createApp({
           this.closeHostDetailsButton = texts.closeHostDetailsButton;
           this.connectedHostPortTitle = texts.connectedHostPortTitle;
           this.lang = lang;
+          this.updateFrequencyLabel = texts.updateFrequencyLabel:
         })
         .catch((error) =>
           console.error("Errore nel caricamento del file JSON:", error)
         );
     },
+    setLanguage: function (lang) {
+      this.lang = lang;
+      this.loadTranslation(lang);
+    },
   },
+  
   mounted: function () {
     this.init_topology()
     this.loadTranslation("it") // Load default language

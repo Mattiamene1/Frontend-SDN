@@ -15,7 +15,8 @@ function changeLanguage(lang) {
         const app = Vue.createApp({
           data() {
             return {
-              autoUpdateButtonText: texts.autoUpdateButtonText,
+              autoUpdateButtonTextStart: texts.autoUpdateButtonTextStart,
+              autoUpdateButtonTextStop: texts.autoUpdateButtonTextStop,
               layoutVertical: texts.layoutVertical,
               layoutHorizontal: texts.layoutHorizontal,
               switchDetailsTitle: texts.switchDetailsTitle.replace("{{switchId}}", switchId),
@@ -37,6 +38,7 @@ function changeLanguage(lang) {
               hostDetailsTitle: texts.hostDetailsTitle.replace("{{switchId}}", switchId),
               closeHostDetailsButton: texts.closeHostDetailsButton,
               connectedHostPortTitle: texts.connectedHostPortTitle,
+              updateFrequencyLabel: texts.updateFrequencyLabel:
               switchId: 1, // Assumiamo che switchId e hostId siano valori già definiti
               hostId: 1
             };

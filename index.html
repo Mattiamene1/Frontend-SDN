@@ -28,13 +28,23 @@
     <div id="app" class="container">
         <div class="button-row">
             
-            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonText }}</button>
+            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-if="auto_update">{{ autoUpdateButtonTextStart }}</button>
 
-            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonText }}</button>&emsp;
-
+            <button class="btn btn-primary" href="#" @click="change_auto_update()" v-else>{{ autoUpdateButtonTextStop }}</button>&emsp;
+            
+            <div class="slider-container">
+                <label for="updateFrequency">{{ updateFrequencyLabel }}</label>
+                <input type="range" id="updateFrequency" min="1" max="30" step="1" v-model="updateFrequency" @input="updateFrequencyChanged" title="Update Frequency">
+                <span>{{ updateFrequency }}s</span>
+            </div>
+                
             <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
 
             <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
+
+            <img src="svg/it.svg" alt="Italian" @click="setLanguage('it')" class="language-flag">&emsp;
+
+            <img src="svg/uk.svg" alt="English" @click="setLanguage('en')" class="language-flag">&emsp;
 
         </div>
         <div class="row">

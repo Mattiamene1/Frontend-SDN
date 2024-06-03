@@ -2,7 +2,8 @@
   "it": {
     "text": {
       "title": "Visualizzatore Topologie di Rete",
-      "autoUpdateButtonText": "{{autoUpdate ? 'FERMA' : 'AVVIA'}} Aggiornamento Automatico",
+      "autoUpdateButtonTextStart": "AVVIA Aggiornamento Automatico",
+      "autoUpdateButtonTextStop": "FERMA Aggiornamento Automatico",
       "layoutVertical": "Layout Verticale",
       "layoutHorizontal": "Layout Orizzontale",
       "switchDetailsTitle": "Dettagli dello Switch {{switchId}}",
@@ -23,13 +24,14 @@
       "packetCount": "Conteggio Pacchetti",
       "hostDetailsTitle": "Dettagli Host {{hostId}}",
       "closeHostDetailsButton": "Chiudi Dettagli Host",
-      "connectedHostPortTitle": "Host connesso alla porta"
-    }
+      "connectedHostPortTitle": "Host connesso alla porta",
+      "updateFrequencyLabel": "Aggiorna frequenza (secondi)"
   },
   "en": {
     "text": {
       "title": "Network Topologies Viewer",
-      "autoUpdateButtonText": "{{autoUpdate ? 'STOP' : 'START'}} Auto Update",
+      "autoUpdateButtonTextStart": "START Automatic update",
+      "autoUpdateButtonTextStop": "STOP Automatic update",
       "layoutVertical": "Vertical Layout",
       "layoutHorizontal": "Horizontal Layout",
       "switchDetailsTitle": "Switch Details {{switchId}}",
@@ -50,7 +52,8 @@
       "packetCount": "Packet Count",
       "hostDetailsTitle": "Host Details {{hostId}}",
       "closeHostDetailsButton": "Close Host Details",
-      "connectedHostPortTitle": "Host Connected to Port"
+      "connectedHostPortTitle": "Host Connected to Port",
+      "updateFrequencyLabel": "Update Frequency (seconds)"
     }
   }
 }
