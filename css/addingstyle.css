@@ -1,4 +1,4 @@
-/*:root {
+:root {
     --primary-100:#FF7F50;
     --primary-200:#dd6236;
     --primary-300:#8f1e00;
@@ -17,7 +17,7 @@
     margin: 5px !important ;
     box-sizing: border-box !important;
   }
-  
+  /*
   .body {
     background-attachment: scroll !important;
     background-clip:border-box !important;  
