@@ -42,11 +42,16 @@
             <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
 
             <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
-            
-            <table class="language">
-                <img src="svg/it.svg" alt="Italian" @click="setLanguage('it')" class="language-flag">&emsp;
 
-                <img src="svg/uk.svg" alt="English" @click="setLanguage('en')" class="language-flag">&emsp;
+            <table class="language">
+                <tr>
+                    <td>
+                        <img src="svg/it.svg" alt="Italian" @click="setLanguage('it')" class="language-flag">
+                    </td>
+                    <td>
+                        <img src="svg/uk.svg" alt="English" @click="setLanguage('en')" class="language-flag">
+                    </td>
+                </tr>
             </table>   
 
         </div>

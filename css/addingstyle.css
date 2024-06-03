@@ -21,6 +21,7 @@
   .body{
     max-width: 95vh !important;
     color:var(--primary-100)!important;
+    box-sizing:border-box!important;
   }
   /*
   .body {
@@ -47,15 +48,17 @@
     flex-direction: column !important;
   }
   */
-  html {
+  html,body {
     font-family: 'Roboto', sans-serif!important;
     font-size: 18px!important;
     color: var(--text-200)!important;
     height: 100%!important;
+    margin: 0 !important;
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
   }
+
   .some_space{
     min-height: 96px!important;
     color:var(--primary-100)!important;
@@ -67,7 +70,8 @@
     position: relative !important;
     transform: translate(-50%, -50%)!;
     position: 10px!important ;
-    width: 100% !important; ;
+    width: 100% !important;
+    height: 100% !important;
     min-height:128px !important;
     margin:10px !important;/*
     overflow:hidden !important;
@@ -114,8 +118,20 @@
     position: relative!important;
     justify-content: space-between!important;
   }  
-    /*
+
+  .container {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: var(--bg-200) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
   }
+  /*
+  
   .container1 {
     background-color: var(--primary-300)!important;
     width: 100%!important;
