@@ -160,11 +160,9 @@ createApp({
 
       // instantiate next app
       const app = new nx.ui.Application();
-
       // instantiate Topology class
       this.topology = new nx.graphic.Topology(this.topologyConfig);
-
-      // load topology data from app/data.js
+      // load topology data from 
       this.topology.data(build_topology());
 
       // bind the topology object to the app
@@ -185,7 +183,6 @@ createApp({
       })
 
       this.topology.attach(app);
-
       // app must run inside a specific container. In our case this is the one with id="topology-container"
       app.container(document.getElementById("topology-container"));
 
