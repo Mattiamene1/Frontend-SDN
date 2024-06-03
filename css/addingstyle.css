@@ -17,6 +17,11 @@
     margin: 5px !important ;
     box-sizing: border-box !important;
   }
+
+  .body{
+    max-width: 95vh !important;
+
+  }
   /*
   .body {
     background-attachment: scroll !important;
@@ -64,21 +69,20 @@
     overflow:hidden !important;
     overflow-y:auto !important;
   }
-
+*/
   .button-row{
     justify-content: space-between !important;
-    width: 100% !important;
+    width: 95vh !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center!important;
     gap: 10px!important;
     margin-top: 10px!important;
   }
-  */
 
   .btn{
-    min-height:128px !important;
-    min-width: 100px ; 
+    min-height:96px !important;
+    min-width: 128px ; 
     margin: 1%!important;
     position: relative!important;
     justify-content: space-between!important;
@@ -86,7 +90,7 @@
 
   .btn-primary{
     flex: 2 !important;
-    min-width: 380px !important;
+    min-width: 256px !important;
     background-color:var(--primary-100)!important;
     border-color:var(--accent-100)!important;
   }
@@ -100,6 +104,13 @@
     .space{
     flex: 1;
     }
+  
+  .btn-danger{
+    background-color:var(--primary-300) !important;
+    border-color:var(--accent-100)!important;
+    
+
+  }  
     /*
   }
   .container1 {
