@@ -41,7 +41,7 @@
     transition: all 0.4s ease-out!important;
     flex-direction: column !important;
   }
-  
+  */
   html {
     font-family: 'Roboto', sans-serif!important;
     font-size: 18px!important;
@@ -51,7 +51,7 @@
     justify-content: center!important;
     align-items: center!important;
   }
-
+/*
   #app.container {
     max-width: 98%!important;
     position: center !important;
