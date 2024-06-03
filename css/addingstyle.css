@@ -64,7 +64,7 @@
     overflow:hidden !important;
     overflow-y:auto !important;
   }
-*/
+
   .button-row{
     justify-content: space-between !important;
     width: 100% !important;
@@ -74,6 +74,7 @@
     gap: 10px!important;
     margin-top: 10px!important;
   }
+  */
 
   .btn{
     min-height:128px !important;
@@ -155,8 +156,6 @@
   .slider-container input[type="range"] {
     writing-mode: bt-lr!important;
     -webkit-appearance: slider-horizontal!important;
-    width: 8px!important;
-    height: 150px!important;
   }
   
   .slider-container span {
