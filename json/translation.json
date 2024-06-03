@@ -1,6 +1,6 @@
 {
   "it": {
-    "text": {
+    "texts": {
       "title": "Visualizzatore Topologie di Rete",
       "autoUpdateButtonTextStart": "AVVIA Aggiornamento Automatico",
       "autoUpdateButtonTextStop": "FERMA Aggiornamento Automatico",
@@ -29,7 +29,7 @@
     }
   },
   "en": {
-    "text": {
+    "texts": {
       "title": "Network Topologies Viewer",
       "autoUpdateButtonTextStart": "START Automatic update",
       "autoUpdateButtonTextStop": "STOP Automatic update",
