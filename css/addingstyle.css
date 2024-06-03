@@ -58,15 +58,16 @@
       border-color:var(--accent-100)!important;
       position: relative!important;
       justify-content: center !important;
+      text-align: center !important;
     }  
 
     .slider-container {
       flex: 1,5 !important;
       display: flex!important;
       align-items: center!important;
-      margin-left: 10px!important;
       flex-direction: column!important;
-      background-color:var(--primary-200);
+      background-color:var(--primary-100)!important;
+      border-color:var(--accent-100)!important;
     }
     
     .slider-container label ,.slider-container span{
