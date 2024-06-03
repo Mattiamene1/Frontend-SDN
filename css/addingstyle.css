@@ -20,6 +20,10 @@
     margin: 5px !important ;
     box-sizing: border-box !important;
   }
+  
+  #app.container{
+    width: 100% !important;
+  }
 
   .button-row{
     justify-content: space-between !important;
@@ -37,7 +41,7 @@
     position: relative!important;
     justify-content: center!important;
     text-align: center!important;
-    
+    border-radius:10px!important;
   }
 
     .btn-primary{
@@ -45,12 +49,14 @@
       min-width: 256px !important;
       background-color:var(--primary-100)!important;
       border-color:var(--accent-100)!important;
+      width: calc(2 * 200px) !important;
     }
     
     .btn-secondary{
       flex: 2  !important;
       background-color: var(--primary-200)!important;
       border-color:var(--accent-200)!important;
+      width: 200px !important;
     }
     
     .btn-danger{
@@ -59,6 +65,7 @@
       position: relative!important;
       justify-content: center !important;
       text-align: center !important;
+      border-radius:10px!important;
     }  
 
     .slider-container {
@@ -68,6 +75,8 @@
       flex-direction: column!important;
       background-color:var(--primary-100)!important;
       border-color:var(--accent-100)!important;
+      border-radius:10px!important;
+      width: 150px !important;
     }
     
     .slider-container label ,.slider-container span{
@@ -77,6 +86,7 @@
     .slider-container input[type="range"] {
       writing-mode: bt-lr!important;
       -webkit-appearance: slider-horizontal!important;
+      width: 100% !important;
     }
     
 
