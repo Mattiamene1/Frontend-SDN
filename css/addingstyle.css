@@ -57,11 +57,12 @@
     align-items: center!important;
   }
   .some_space{
-    min-height: 64px!important;
+    min-height: 96px!important;
     color:var(--primary-100)!important;
   }
 
   #app.container {
+    color:var(--primary-100)!important;
     position: center !important;
     position: relative !important;
     transform: translate(-50%, -50%)!;
@@ -157,6 +158,7 @@
   */
 
   .slider-container {
+    flex: 1 !important;
     display: flex!important;
     align-items: center!important;
     margin-left: 10px!important;
@@ -175,10 +177,11 @@
   .slider-container span {
     margin-top: 10px!important;
   }
-  
+
   .language {
-    display: grid;
-    grid-gap: 1%;
+    flex:1 !important;
+    display: grid!important;
+    grid-gap: 1%!important;
   }
 
   .language-flag {
