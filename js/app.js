@@ -225,7 +225,7 @@ createApp({
           this.closeHostDetailsButton = texts.closeHostDetailsButton;
           this.connectedHostPortTitle = texts.connectedHostPortTitle;
           this.lang = lang;
-          this.updateFrequencyLabel = texts.updateFrequencyLabel:
+          this.updateFrequencyLabel = texts.updateFrequencyLabel;
         })
         .catch((error) =>
           console.error("Errore nel caricamento del file JSON:", error)
