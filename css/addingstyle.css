@@ -126,3 +126,21 @@
       background-color: var(--bg-200);
       color: var(--text-100);
     }
+
+  .mt-2 col{
+    justify-content: space-between !important;
+    display: flex !important;
+    align-items: center!important;
+    gap: 10px!important;
+    margin:0 auto;
+    width:90%
+  }
+
+  .mt-2-table-bordered .mt-2.table-sm{
+    justify-content: space-between !important;
+    display: flex !important;
+    align-items: center!important;
+    gap: 10px!important;
+    margin:0 auto;
+    width:90%
+  }
