@@ -195,7 +195,7 @@ createApp({
       fetch("json/translation.json")
         .then((response) => response.json())
         .then((data) => {
-          const texts = data[lang].text;
+          const texts = data[lang].texts;
           this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
           this.autoUpdateButtonTextStop = text.autoUpdateButtonTextStop;
           this.layoutVertical = texts.layoutVertical;
