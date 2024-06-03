@@ -19,6 +19,7 @@
   }
   
   .body {
+    display: flex !important;
     background-attachment: scroll !important;
     background-clip:border-box !important;  
     background-origin: padding-box !important;
