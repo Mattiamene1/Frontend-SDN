@@ -93,7 +93,7 @@
   }
   
   .btn-secondary{
-    flex: 2 !important;
+    flex: 2  !important;
     background-color: var(--primary-200)!important;
     border-color:var(--accent-200)!important;
     }
@@ -109,7 +109,7 @@
     justify-content: space-between!important;
   }  
 
-  .container {
+  .container,#app.n-topology-blue {
     width: 100% !important;
     height: 100% !important;
     background-color: var(--bg-200) !important;
@@ -220,16 +220,9 @@
           grid-template-columns: repeat(2, 1fr);
       }
   }
-    
-  #app.n-topology-blue{
-    max-width: 60vh !important;
-    max-height: 40vh !important;
-    overflow-y:auto !important;
-    position: center !important;
-    position: relative !important;
-    transform: translate(-50%, -50%)!important;
-    position: 10px!important;
-    margin:15px !important;
-    overflow: visible!important;
+  #app.n-topology-blue {
+    overflow-y: auto !important;
+    margin: 15px !important;
+    overflow: visible !important;
     flex-direction: column !important;
-  }
+}
