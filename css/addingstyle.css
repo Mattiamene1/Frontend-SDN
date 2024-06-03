@@ -20,7 +20,6 @@
 
   .body{
     max-width: 95vh !important;
-
   }
   /*
   .body {
@@ -46,7 +45,7 @@
     transition: all 0.4s ease-out!important;
     flex-direction: column !important;
   }
-  
+  */
   html {
     font-family: 'Roboto', sans-serif!important;
     font-size: 18px!important;
@@ -56,9 +55,9 @@
     justify-content: center!important;
     align-items: center!important;
   }
-*/
+
   #app.container {
-    max-width: 90vh !important;
+    max-height: -5vh !important;
     position: center !important;
     position: relative !important;
     transform: translate(-50%, -50%)!;
