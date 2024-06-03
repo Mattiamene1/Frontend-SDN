@@ -77,7 +77,8 @@
       background-color:var(--primary-100)!important;
       border-color:var(--accent-100)!important;
       border-radius:10px!important;
-      width: 150px !important;
+      width: 200px !important;
+      height: 96px!important;
     }
     
     .slider-container label ,.slider-container span{
