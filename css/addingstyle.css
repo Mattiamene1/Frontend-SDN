@@ -56,20 +56,20 @@
     justify-content: center!important;
     align-items: center!important;
   }
-
+*/
   #app.container {
-    max-width: 98%!important;
+    max-width: 90vh !important;
     position: center !important;
     position: relative !important;
     transform: translate(-50%, -50%)!;
     position: 10px!important ;
     width: 100% !important; ;
     min-height:128px !important;
-    margin:10px !important;
+    margin:10px !important;/*
     overflow:hidden !important;
-    overflow-y:auto !important;
+    overflow-y:auto !important;*/
   }
-*/
+
   .button-row{
     justify-content: space-between !important;
     width: 95vh !important;
@@ -108,7 +108,7 @@
   .btn-danger{
     background-color:var(--primary-300) !important;
     border-color:var(--accent-100)!important;
-    
+
 
   }  
     /*
