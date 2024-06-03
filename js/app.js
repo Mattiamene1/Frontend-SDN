@@ -5,8 +5,6 @@ createApp({
     return {
       topology: null,
       topologyConfig: {
-        // configuration for nodes
-        // adaptive: true,
         width: window.innerWidth,
         height: window.innerHeight,
         nodeConfig: {
@@ -14,15 +12,11 @@ createApp({
           iconType: "model.device_type",
           color: "model.color",
         },
-        // configuration for links
         linkConfig: {
           linkType: "straight",
           color: "model.color"
         },
-        // if true, the nodes' icons are shown, a dot is shown instead
         showIcon: true,
-        //enableSmartNode: true,
-        //autoLayout: true,
         dataProcessor: "force"
       },
       auto_update: false,
@@ -35,7 +29,7 @@ createApp({
       host_id: null,
       host_detail: false,
 
-      // Translation related data
+      // Translation or text related data
       autoUpdateButtonTextStart: '',
       autoUpdateButtonTextStop: '',
       layoutVertical: '',
@@ -61,6 +55,7 @@ createApp({
       connectedHostPortTitle: '',
       lang: '',
       updateFrequencyLabel: '',
+      updateFrequency: 15
     }
   },
   watch: {
@@ -93,7 +88,7 @@ createApp({
           if (vm.host_detail) {
             vm.show_host(vm.host_id)
           }
-        },vm.updateFrequency);
+        },vm.updateFrequency*1000);
         this.auto_update = true
       }
     },
@@ -166,7 +161,6 @@ createApp({
       this.topology.data(build_topology());
 
       // bind the topology object to the app
-
       this.topology.on('topologyGenerated', function () {
         vm.topology.eachNode(function (callback, context) {
           callback.on('clickNode', function () {
@@ -234,6 +228,6 @@ createApp({
   
   mounted: function () {
     this.init_topology()
-    this.loadTranslation("it") // Load default language
+    this.loadTranslation("it")
   },
 }).mount("#app")
