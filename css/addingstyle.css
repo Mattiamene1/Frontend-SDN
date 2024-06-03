@@ -20,6 +20,7 @@
 
   .body{
     max-width: 95vh !important;
+    color:var(--primary-100)!important;
   }
   /*
   .body {
@@ -54,6 +55,10 @@
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
+  }
+  .some_space{
+    min-height: 64px!important;
+    color:var(--primary-100)!important;
   }
 
   #app.container {
@@ -150,6 +155,7 @@
     border: 0.5px solid var(--primary-200)!important;
   }
   */
+
   .slider-container {
     display: flex!important;
     align-items: center!important;
@@ -170,11 +176,40 @@
     margin-top: 10px!important;
   }
   
+  .language {
+    display: grid;
+    grid-gap: 1%;
+  }
+
   .language-flag {
     cursor: pointer!important;
     width: 32px!important;
     height: 32px!important;
     margin-left: 10px!important;
+  }
+
+  @media (max-width: 600px) {
+      .language {
+          grid-template-columns: repeat(1, 1fr);
+      }
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+      .language {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media (min-width: 901px) and (max-width: 1200px) {
+      .language {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media (min-width: 1201px) {
+      .language {
+          grid-template-columns: repeat(2, 1fr);
+      }
   }
     
   #app.n-topology-blue{

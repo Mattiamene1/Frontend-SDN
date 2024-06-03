@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <div class="some_space"></div>
     <div id="app" class="container">
         <div class="button-row">
             
@@ -41,10 +42,12 @@
             <button class="btn btn-secondary" href="#" @click="vertical_layout()" v-if="!auto_update">{{ layoutVertical }}</button>&emsp;
 
             <button class="btn btn-secondary" href="#" @click="horizontal_layout()" v-if="!auto_update">{{ layoutHorizontal }}</button>&emsp;
+            
+            <table class="language">
+                <img src="svg/it.svg" alt="Italian" @click="setLanguage('it')" class="language-flag">&emsp;
 
-            <img src="svg/it.svg" alt="Italian" @click="setLanguage('it')" class="language-flag">&emsp;
-
-            <img src="svg/uk.svg" alt="English" @click="setLanguage('en')" class="language-flag">&emsp;
+                <img src="svg/uk.svg" alt="English" @click="setLanguage('en')" class="language-flag">&emsp;
+            </table>   
 
         </div>
         <div class="row">
