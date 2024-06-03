@@ -1,4 +1,4 @@
-:root {
+/*:root {
     --primary-100:#FF7F50;
     --primary-200:#dd6236;
     --primary-300:#8f1e00;
@@ -156,8 +156,8 @@
   }
   
   .slider-container input[type="range"] {
-    writing-mode: bt-lr!important; /* IE */
-    -webkit-appearance: slider-vertical!important; /* Chrome */
+    writing-mode: bt-lr!important; 
+    -webkit-appearance: slider-vertical!important;
     width: 8px!important;
     height: 150px!important;
   }
@@ -189,4 +189,4 @@
     margin:15px !important;
     overflow: visible!important;
     flex-direction: column !important;
-  }
+  }*/

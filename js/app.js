@@ -6,7 +6,7 @@ createApp({
       topology: null,
       topologyConfig: {
         // configuration for nodes
-        //adaptive: true,
+        // adaptive: true,
         width: window.innerWidth,
         height: window.innerHeight,
         nodeConfig: {
