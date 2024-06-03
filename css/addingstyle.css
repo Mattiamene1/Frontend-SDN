@@ -16,31 +16,6 @@
     margin: 5px !important ;
     box-sizing: border-box !important;
   }
-  
-  html,body {
-    font-family: 'Roboto', sans-serif!important;
-    font-size: 18px!important;
-    color: var(--text-200)!important;
-    height: 100%!important;
-    margin: 0 !important;
-    display: flex!important;
-    justify-content: center!important;
-  }
-  .body{
-    max-width: 95vh!important;
-    color: var(--primary-100)!important;
-  }
-  .container,#app.n-topology-blue {
-    width: 100% !important;
-    height: 100% !important;
-    background-color: var(--bg-200) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 10px !important;
-    box-sizing: border-box !important;
-  }
 
   .button-row{
     justify-content: space-between !important;
@@ -139,10 +114,3 @@
           grid-template-columns: repeat(2, 1fr);
       }
   }
-  
-  #app.n-topology-blue {
-    overflow-y: auto !important;
-    margin: 15px !important;
-    overflow: visible !important;
-    flex-direction: column !important;
-}
