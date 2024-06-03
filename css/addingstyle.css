@@ -108,8 +108,8 @@
   .btn-danger{
     background-color:var(--primary-300) !important;
     border-color:var(--accent-100)!important;
-
-
+    position: relative!important;
+    justify-content: space-between!important;
   }  
     /*
   }
