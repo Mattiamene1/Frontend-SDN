@@ -1,7 +1,6 @@
 {
   "it": {
     "texts": {
-      "title": "Visualizzatore Topologie di Rete",
       "autoUpdateButtonTextStart": "AVVIA Aggiornamento Automatico",
       "autoUpdateButtonTextStop": "FERMA Aggiornamento Automatico",
       "layoutVertical": "Layout Verticale",
@@ -30,7 +29,6 @@
   },
   "en": {
     "texts": {
-      "title": "Network Topologies Viewer",
       "autoUpdateButtonTextStart": "START Automatic update",
       "autoUpdateButtonTextStop": "STOP Automatic update",
       "layoutVertical": "Vertical Layout",

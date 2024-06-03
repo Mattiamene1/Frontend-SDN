@@ -36,7 +36,6 @@ createApp({
       host_detail: false,
 
       // Translation related data
-      title: '',
       autoUpdateButtonTextStart: '',
       autoUpdateButtonTextStop: '',
       layoutVertical: '',
@@ -200,7 +199,6 @@ createApp({
         .then((response) => response.json())
         .then((data) => {
           const texts = data[lang].text;
-          this.title = texts.title;
           this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
           this.autoUpdateButtonTextStop = text.autoUpdateButtonTextStop;
           this.layoutVertical = texts.layoutVertical;
