@@ -27,7 +27,7 @@
     flex-direction: column !important;
     align-items: center !important; 
     justify-content: flex-start !important; 
-    max-width: 95vh !important;
+    max-width: 90vh !important;
     max-height: 100vh !important;
     margin-top: 0px !important;
     margin-bottom: 0px !important;
@@ -51,7 +51,7 @@
     justify-content: center!important;
     align-items: center!important;
   }
-/*
+
   #app.container {
     max-width: 98%!important;
     position: center !important;
@@ -64,7 +64,7 @@
     overflow:hidden !important;
     overflow-y:auto !important;
   }
-
+/*
   .button-row{
     justify-content: space-between!important;
     width: 100% !important;
