@@ -197,7 +197,7 @@ createApp({
         .then((data) => {
           const texts = data[lang].texts;
           this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
-          this.autoUpdateButtonTextStop = text.autoUpdateButtonTextStop;
+          this.autoUpdateButtonTextStop = texts.autoUpdateButtonTextStop;
           this.layoutVertical = texts.layoutVertical;
           this.layoutHorizontal = texts.layoutHorizontal;
           this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
