@@ -57,7 +57,6 @@
   }
 
   #app.container {
-    max-height: -5vh !important;
     position: center !important;
     position: relative !important;
     transform: translate(-50%, -50%)!;
@@ -71,7 +70,6 @@
 
   .button-row{
     justify-content: space-between !important;
-    width: 95vh !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center!important;
