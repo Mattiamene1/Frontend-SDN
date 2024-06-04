@@ -24,7 +24,7 @@
       "hostDetailsTitle": "Dettagli Host {{hostId}}",
       "closeHostDetailsButton": "Chiudi Dettagli Host",
       "connectedHostPortTitle": "Host connesso alla porta",
-      "updateFrequencyLabel": "Aggiorna frequenza (secondi)"
+      "updateFrequencyLabel": "Aggiorna frequenza (s)"
     }
   },
   "en": {
@@ -52,7 +52,7 @@
       "hostDetailsTitle": "Host Details {{hostId}}",
       "closeHostDetailsButton": "Close Host Details",
       "connectedHostPortTitle": "Host Connected to Port",
-      "updateFrequencyLabel": "Update Frequency (seconds)"
+      "updateFrequencyLabel": "Update Frequency (s)"
     }
   }
 }
