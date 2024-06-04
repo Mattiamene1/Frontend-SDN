@@ -161,10 +161,10 @@ createApp({
       let res = await get_flow_table(id)
       this.flow_table = res[id]
     },
-    show_switch: function (id,loadTranslation) {
+    show_switch: function (id) {
       this.switch_id = id
       console.log(id);
-      for (switch_ of switches) {
+      for (let switch_ of switches) {
         if (id === parseInt(switch_.dpid)) {
           this.switch_ = switch_
           break
@@ -172,22 +172,22 @@ createApp({
       }
       this.show_flow_table(id)
       this.switch_detail = true
-      loadTranslation(id);
+      this.loadTranslation(this.lang);
     },
     hide_switch: function () {
       this.switch_detail = false
     },
-    show_host: function (id,loadTranslation) {
+    show_host: function (id) {
       this.host_id = id
       console.log(id);
-      for (host of hosts) {
+      for (let host of hosts) {
         if (host.ipv4.includes(id) || host.ipv6.includes(id)) {
           this.host = host
           break
         }
       }
       this.host_detail = true
-      loadTranslation(id);
+      this.loadTranslation(this.lang);
     },
     hide_host: function () {
       this.host_detail = false
