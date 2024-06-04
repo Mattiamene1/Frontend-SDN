@@ -81,7 +81,8 @@
       height: 96px!important;
     }
     
-    .slider-container label ,.slider-container span{
+    .slider-container label ,
+    .slider-container span{
       color:var(--accent-200);
     }
     
@@ -125,27 +126,64 @@
       width: 100%;
       background-color: var(--bg-200);
       color: var(--text-100);
+      margin:10px auto !important;
     }
 
-  .mt-2 col{
-    justify-content: space-between !important;
-    display: flex !important;
-    align-items: center!important;
-    gap: 10px!important;
-    margin:0 auto;
-    width:100%!important;
-  }
-
-  #mt-2-table-bordered,.mt-2.table-sm{
-    justify-content: space-between !important;
-    display: flex !important;
-    align-items: center!important;
-    gap: 10px!important;
-    margin:0 auto;
-    width:90% !important;
-  }
-
-  .mt-2{
-    width: 90%!important;
-    justify-content: space-between!important;
-  }
+    .table {
+      width: 100%!important;
+      background-color: var(--bg-200)!important;
+      color: var(--text-100)!important;
+      margin: 10px auto!important;
+    }
+    
+    .mt-2 {
+      width: 90% !important;
+      justify-content: space-between !important;
+    }
+    
+    .mt-2.table-bordered,
+    .mt-2.table-sm {
+      margin: 10px auto !important; 
+    }
+    
+    #topology-container {
+      width: 100%!important;
+    }
+    
+    .n-topology {
+      width: 100%!important;
+    }
+    
+    .n-topology-blue {
+      width: 100%!important;
+    }
+    
+    #app.container {
+      width: 100%!important;
+      max-width: 1718px; 
+    }
+    
+    .button-row .btn {
+      position: absolute!important;
+      top: 10px!important;
+      right: 10px!important;
+    }
+    
+    .table-container {
+      display: flex!important;
+      justify-content: center!important;
+      flex-direction: column!important;
+      align-items: center!important;
+    }
+    
+    .table-container .table {
+      width: 90%!important;
+      margin: 20px 0!important;
+    }
+    
+    .mt-2.col {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
