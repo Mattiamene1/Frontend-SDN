@@ -142,6 +142,7 @@ createApp({
           this.duration = texts.duration;
           this.packetCount = texts.packetCount;
           this.hostDetailsTitle = texts.hostDetailsTitle.replace("{{hostId}}", this.host_id);
+          this.closeHostDetailsButton = texts.closeHostDetailsButton;
           this.connectedHostPortTitle = texts.connectedHostPortTitle;
           this.lang = lang;
           this.updateFrequencyLabel = texts.updateFrequencyLabel;
