@@ -161,7 +161,7 @@ createApp({
       let res = await get_flow_table(id)
       this.flow_table = res[id]
     },
-    show_switch: function (id) {
+    show_switch: function (id,loadTranslation) {
       this.switch_id = id
       console.log(id);
       for (switch_ of switches) {
@@ -177,7 +177,7 @@ createApp({
     hide_switch: function () {
       this.switch_detail = false
     },
-    show_host: function (id) {
+    show_host: function (id,loadTranslation) {
       this.host_id = id
       console.log(id);
       for (host of hosts) {
@@ -193,6 +193,7 @@ createApp({
       this.host_detail = false
     },
     init_topology: async function () {
+      this.loadTranslation("it");
       hosts = await get_hosts()
       switches = await get_switches()
       links = await get_links()
