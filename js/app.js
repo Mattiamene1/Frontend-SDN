@@ -128,7 +128,6 @@ createApp({
           this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
           this.closeSwitchDetailsButton = texts.closeSwitchDetailsButton;
           this.switchPortsTitle = texts.switchPortsTitle.replace("{{switchId}}", this.switch_id);
-          console.log(this.switch_id);
           this.portNumber = texts.portNumber;
           this.name = texts.name;
           this.macAddress = texts.macAddress;
@@ -143,8 +142,6 @@ createApp({
           this.duration = texts.duration;
           this.packetCount = texts.packetCount;
           this.hostDetailsTitle = texts.hostDetailsTitle.replace("{{hostId}}", this.host_id);
-          console.log(this.host_id);
-          this.closeHostDetailsButton = texts.closeHostDetailsButton;
           this.connectedHostPortTitle = texts.connectedHostPortTitle;
           this.lang = lang;
           this.updateFrequencyLabel = texts.updateFrequencyLabel;
@@ -163,7 +160,6 @@ createApp({
     },
     show_switch: function (id) {
       this.switch_id = id
-      console.log(id);
       for (let switch_ of switches) {
         if (id === parseInt(switch_.dpid)) {
           this.switch_ = switch_
@@ -179,7 +175,6 @@ createApp({
     },
     show_host: function (id) {
       this.host_id = id
-      console.log(id);
       for (let host of hosts) {
         if (host.ipv4.includes(id) || host.ipv6.includes(id)) {
           this.host = host
