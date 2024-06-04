@@ -1,4 +1,4 @@
-function loadJSON(lang = "it") {
+function loadJSON(lang = "it",, switchId = null, hostId = null) {
   fetch("../translation.json")
     .then((response) => response.json())
     .then((data) => {
@@ -31,8 +31,8 @@ function loadJSON(lang = "it") {
             closeHostDetailsButton: texts.closeHostDetailsButton,
             connectedHostPortTitle: texts.connectedHostPortTitle,
             updateFrequencyLabel: texts.updateFrequencyLabel,
-            switchId: 1, // Assumiamo che switchId e hostId siano valori già definiti
-            hostId: 1
+            switchId,
+            hostId,
           };
         }
       }).mount("#app");
