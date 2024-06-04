@@ -197,6 +197,7 @@ createApp({
           this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
           this.closeSwitchDetailsButton = texts.closeSwitchDetailsButton;
           this.switchPortsTitle = texts.switchPortsTitle.replace("{{switchId}}", this.switch_id);
+          console.log(this.switch_id);
           this.portNumber = texts.portNumber;
           this.name = texts.name;
           this.macAddress = texts.macAddress;
@@ -211,6 +212,7 @@ createApp({
           this.duration = texts.duration;
           this.packetCount = texts.packetCount;
           this.hostDetailsTitle = texts.hostDetailsTitle.replace("{{hostId}}", this.host_id);
+          console.log(this.host_id);
           this.closeHostDetailsButton = texts.closeHostDetailsButton;
           this.connectedHostPortTitle = texts.connectedHostPortTitle;
           this.lang = lang;
