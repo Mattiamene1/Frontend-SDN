@@ -122,6 +122,7 @@ createApp({
     },
     show_switch: function (id) {
       this.switch_id = id
+      console.log(id);
       for (switch_ of switches) {
         if (id === parseInt(switch_.dpid)) {
           this.switch_ = switch_
@@ -136,6 +137,7 @@ createApp({
     },
     show_host: function (id) {
       this.host_id = id
+      console.log(id);
       for (host of hosts) {
         if (host.ipv4.includes(id) || host.ipv6.includes(id)) {
           this.host = host
