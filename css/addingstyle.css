@@ -136,11 +136,16 @@
     width:100%!important;
   }
 
-  .mt-2-table-bordered .mt-2.table-sm{
+  #mt-2-table-bordered,.mt-2.table-sm{
     justify-content: space-between !important;
     display: flex !important;
     align-items: center!important;
     gap: 10px!important;
     margin:0 auto;
     width:90% !important;
+  }
+
+  .mt-2{
+    width: 90%!important;
+    justify-content: space-between!important;
   }
