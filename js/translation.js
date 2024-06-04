@@ -1,4 +1,4 @@
-function loadJSON(lang = "it", switchId = null, hostId = null) {
+function loadJSON(lang = "it") {
   fetch("../translation.json")
     .then((response) => response.json())
     .then((data) => {
