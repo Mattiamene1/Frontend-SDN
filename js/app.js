@@ -116,6 +116,47 @@ createApp({
       });
       this.topology.activateLayout('hierarchicalLayout');
     },
+    loadTranslation: function (lang) {
+      fetch("json/translation.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const texts = data[lang].texts;
+          this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
+          this.autoUpdateButtonTextStop = texts.autoUpdateButtonTextStop;
+          this.layoutVertical = texts.layoutVertical;
+          this.layoutHorizontal = texts.layoutHorizontal;
+          this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
+          this.closeSwitchDetailsButton = texts.closeSwitchDetailsButton;
+          this.switchPortsTitle = texts.switchPortsTitle.replace("{{switchId}}", this.switch_id);
+          console.log(this.switch_id);
+          this.portNumber = texts.portNumber;
+          this.name = texts.name;
+          this.macAddress = texts.macAddress;
+          this.flowTableTitle = texts.flowTableTitle.replace("{{switchId}}", this.switch_id);
+          this.tableID = texts.tableID;
+          this.priority = texts.priority;
+          this.actions = texts.actions;
+          this.match = texts.match;
+          this.timeout = texts.timeout;
+          this.idle = texts.idle;
+          this.hard = texts.hard;
+          this.duration = texts.duration;
+          this.packetCount = texts.packetCount;
+          this.hostDetailsTitle = texts.hostDetailsTitle.replace("{{hostId}}", this.host_id);
+          console.log(this.host_id);
+          this.closeHostDetailsButton = texts.closeHostDetailsButton;
+          this.connectedHostPortTitle = texts.connectedHostPortTitle;
+          this.lang = lang;
+          this.updateFrequencyLabel = texts.updateFrequencyLabel;
+        })
+        .catch((error) =>
+          console.error("Errore nel caricamento del file JSON:", error)
+        );
+    },
+    setLanguage: function (lang) {
+      this.lang = lang;
+      this.loadTranslation(lang);
+    },
     show_flow_table: async function (id) {
       let res = await get_flow_table(id)
       this.flow_table = res[id]
@@ -188,47 +229,6 @@ createApp({
       while (elements.length > 0) {
         elements[0].parentNode.removeChild(elements[0]);
       }
-    },
-    loadTranslation: function (lang) {
-      fetch("json/translation.json")
-        .then((response) => response.json())
-        .then((data) => {
-          const texts = data[lang].texts;
-          this.autoUpdateButtonTextStart = texts.autoUpdateButtonTextStart;
-          this.autoUpdateButtonTextStop = texts.autoUpdateButtonTextStop;
-          this.layoutVertical = texts.layoutVertical;
-          this.layoutHorizontal = texts.layoutHorizontal;
-          this.switchDetailsTitle = texts.switchDetailsTitle.replace("{{switchId}}", this.switch_id);
-          this.closeSwitchDetailsButton = texts.closeSwitchDetailsButton;
-          this.switchPortsTitle = texts.switchPortsTitle.replace("{{switchId}}", this.switch_id);
-          console.log(this.switch_id);
-          this.portNumber = texts.portNumber;
-          this.name = texts.name;
-          this.macAddress = texts.macAddress;
-          this.flowTableTitle = texts.flowTableTitle.replace("{{switchId}}", this.switch_id);
-          this.tableID = texts.tableID;
-          this.priority = texts.priority;
-          this.actions = texts.actions;
-          this.match = texts.match;
-          this.timeout = texts.timeout;
-          this.idle = texts.idle;
-          this.hard = texts.hard;
-          this.duration = texts.duration;
-          this.packetCount = texts.packetCount;
-          this.hostDetailsTitle = texts.hostDetailsTitle.replace("{{hostId}}", this.host_id);
-          console.log(this.host_id);
-          this.closeHostDetailsButton = texts.closeHostDetailsButton;
-          this.connectedHostPortTitle = texts.connectedHostPortTitle;
-          this.lang = lang;
-          this.updateFrequencyLabel = texts.updateFrequencyLabel;
-        })
-        .catch((error) =>
-          console.error("Errore nel caricamento del file JSON:", error)
-        );
-    },
-    setLanguage: function (lang) {
-      this.lang = lang;
-      this.loadTranslation(lang);
     },
   },
   
