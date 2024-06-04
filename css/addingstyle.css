@@ -165,12 +165,6 @@
       max-width: 1718px; 
     }
     
-    .button-row .btn {
-      position: absolute!important;
-      top: 10px!important;
-      right: 10px!important;
-    }
-    
     .table-container {
       display: flex!important;
       justify-content: center!important;
