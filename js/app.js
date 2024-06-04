@@ -131,6 +131,7 @@ createApp({
       }
       this.show_flow_table(id)
       this.switch_detail = true
+      loadTranslation(id);
     },
     hide_switch: function () {
       this.switch_detail = false
@@ -145,6 +146,7 @@ createApp({
         }
       }
       this.host_detail = true
+      loadTranslation(id);
     },
     hide_host: function () {
       this.host_detail = false
