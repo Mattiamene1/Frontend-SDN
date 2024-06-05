@@ -21,9 +21,10 @@ Using Apache2 as webserver([port forwarding](https://github.com/Mattiamene1/Back
   Once [back-end](https://github.com/Mattiamene1/Backend-SDN) is UP, navigate the http://localhost:8000
 
 ##Tips
-If the second block isn't loading as expected,wait aroud a minute then refresh the page.
-Somentimes cookie and cache can disturb the correct visualization of the project try `F12 -> Network -> disable chache'
+If the second block isn't loading as expected, wait a minute then refresh the page.
+Somentimes cookies and cache can disturb the correct visualization of the project
+> try ** F12 ** → ** Network tab ** → ** disable chache **
 
-## Demo Gif
+## Demo
 
 <img src="https://github.com/Mattiamene1/Frontend-SDN/blob/main/Presentazione/demo.gif">
