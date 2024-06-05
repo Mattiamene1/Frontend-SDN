@@ -1,6 +1,6 @@
 # TopologyDisplay - SDN - Frontend
 
-Softwarized And Virtualized mobile networks project 2023
+Softwarized And Virtualized mobile networks project 2024
 
 ## Authors
 
