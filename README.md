@@ -27,4 +27,4 @@ Somentimes cookies and cache can disturb the correct visualization of the projec
 
 ## Demo
 
-<img src="https://github.com/Mattiamene1/Frontend-SDN/blob/main/Presentazione/demo.gif">
+<img src="https://github.com/Mattiamene1/Frontend-SDN/blob/main/docs/demo.gif">
