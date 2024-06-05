@@ -1,4 +1,4 @@
-const BASEURL = "http://localhost:8000"
+const BASEURL = "http://127.0.0.1:3000"
 
 let hosts = []
 let switches = []
