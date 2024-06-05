@@ -50,9 +50,7 @@ function build_topology() {
     next_id++;
 
     nodes.push({
-      id: id,
-      //x: (600 + 200 * idx),
-      //y: 100,
+      id: id,//there you can add y and x paramethers
       name: parseInt(switch_.dpid),
       device_type: "switch",
     })
@@ -70,9 +68,7 @@ function build_topology() {
     id_map[host.port.name] = next_id
     next_id++
     nodes.push({
-      id: host.port.name,
-      //x: (400 + 200 * idx),
-      //y: 200,
+      id: host.port.name,//there you can add y and x paramethers
       name: ip,
       device_type: "host"
     })

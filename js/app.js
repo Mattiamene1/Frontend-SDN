@@ -29,7 +29,7 @@ createApp({
       host_id: null,
       host_detail: false,
 
-      // Translation or text related data
+      // Translation or text related data precall
       autoUpdateButtonTextStart: '',
       autoUpdateButtonTextStop: '',
       layoutVertical: '',
@@ -195,7 +195,7 @@ createApp({
       links = await get_links()
       let vm = this
 
-      // instantiate next app
+      // instantiate next js app
       const app = new nx.ui.Application();
       // instantiate Topology class
       this.topology = new nx.graphic.Topology(this.topologyConfig);
@@ -219,7 +219,7 @@ createApp({
       })
 
       this.topology.attach(app);
-      // app must run inside a specific container. In our case this is the one with id="topology-container"
+      // app must run inside a specific container. In our case this is the one with id="topology-container" but it can be modified as wanted
       app.container(document.getElementById("topology-container"));
 
       const elements = document.getElementsByClassName('n-popupContainer');
